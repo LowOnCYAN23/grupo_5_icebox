@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.13"
+  },
+  "name": "clear",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "nodemon src/app.js -e ejs json mjson"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

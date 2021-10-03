@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  border: 0px;
+}
+
+.content {
+  position: relative;
+  display: block;
+}
+
+.register {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0px 100px 0px;
+  position: absolute;
+  top: 31%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2vw;
+  background-color: #30fde8;
+  padding: 20px;
+  border-radius: 10px;
+  line-height: 2rem;
+}
+
+.images {
+  min-height: 100%;
+  width: 100vw;
+  height: 100vw;
+}
+
+.register i {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.new-email,
+.new-password,
+.confir-new-password,
+.new-name,
+.send-email {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.8rem;
+  color: #000;
+  letter-spacing: 0.05143rem;
+  line-height: 0.4rem;
+}
+
+.send-email {
+  line-height: 1rem;
+}
+
+.main-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  margin-top: 30px;
+}
+
+.button {
+  color: #000;
+  background-color: #fff;
+  font-size: 0.8rem;
+  text-decoration: none;
+  pointer-events: auto;
+  border-radius: 10px;
+  padding: 5px;
+  font-family: 'Roboto', sans-serif;
+}
