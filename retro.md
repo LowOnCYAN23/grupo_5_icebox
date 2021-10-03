@@ -1,0 +1,3 @@
+ Generamos una idea basada en un e-commerce girando en torno al mundo de los libros, películas y video juegos, el nombre del proyecto fué muy genérico y lo cambiamos por un nombre definitivo, es el acrónimo ICEBOX, el logo y marca de la empresa relacionadas a la idea de ICEBERG (ICE) y conectada a su temática popular como vinculo al mercado de video juegos, peliculas y libros (BOX).
+En el wireframe tenía mucha información requerida al usuario en el SING UP, bajamos la cantidad de casillas para datos del mismo.
+faltó el uso del archivo creado sobre la raíz de nuestro proyecto .gitignore escribiendo en el mismo lo que vamos a ignorar por ahora node_modules.
