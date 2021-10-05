@@ -1,5 +1,8 @@
 const express = require('express');
 const app = express();
+const path = require('path');
+
+const publicPath = path.resolve(__dirname, '../public');
 
 const homeRoute = require('./routes/homeRoute');
 const loginRoute = require('./routes/loginRoute');
@@ -9,7 +12,9 @@ const productRoute = require('./routes/productRoute');
 const cartRoute = require('./routes/cartRoute');
 
 app.set('view engine', 'ejs');
-app.use(express.static('public'));
+app.set('views', path.join(__dirname, './views'));
+
+app.use('/public', express.static(publicPath));
 
 app.use('/', homeRoute);
 app.use('/login', loginRoute);
