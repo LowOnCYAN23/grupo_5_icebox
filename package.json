@@ -2,7 +2,7 @@
   "name": "pagina-web",
   "version": "1.0.0",
   "description": "Repositorio // Grupo 5 DH 2021\r ---",
-  "main": "index.js",
+  "main": "app.js",
   "dependencies": {
     "ansi-align": "^3.0.1",
     "accepts": "^1.3.7",
@@ -164,7 +164,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "nodemon --watch app.js"
   },
   "repository": {
     "type": "git",
