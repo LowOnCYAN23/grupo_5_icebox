@@ -1,96 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Icebox | Login </title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/cd7ff4f5a7.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../../public/CSS/main.css">
-    <link rel="stylesheet" href="../../../public/CSS/login.css">
+    <title>ICEBOX | Login</title>
+    <%- include( '../partials/head' )%>
 </head>
-
 <body>
-    <header class='main-header'>
-        <div class='main-header-top'>
-            <nav class='left-nav-bar'>
-                <div class='menu-button'>
-                    <a href='/menu'><i class="fas fa-bars"></i></a>
-                </div>
-            </nav>
-            <nav class='center-nav-bar'>
-                <a title='home' href='/index'><img src='../../../public/images/Logo2.svg' class='logo' alt='home'></a>
-            </nav>
-            <nav class='right-nav-bar'>
-                <div class='cart'>
-                    <a href='/productCart'><i class="fas fa-shopping-bag "></i></a>
-                </div>
-                <div class='log-in'>
-                    <a href='/login'><i class="fas fa-user-circle"></i></i></a>
-                </div>
-            </nav>
-        </div>
-    </header>
-    <section>
-        <div class='main-header-bottom'>
-            <p> ¡Envío gratis por compras mayores de 50 USD! </p>
-        </div>
-    </section>
+    <%- include( '../partials/header' )%>  
     <main>
         <section class='product'>
             <img src="../../../public/images/login.jpg" alt='login' class='images'>
             <div class='login'>
-                <form action="" method='POST'>
-
-                    <label for="email" class='email'><i class="fas fa-envelope"></i> Dirección de correo </label>
-                    <input type="email" name='email' value='email' placeholder='micorreo@direccion.com'>
-
-                    <label for="password" class='password'> <i class="fas fa-lock"></i>Contraseña </label>
-                    <input type="password" name='password' value='password' placeholder='********'>
+                <p class='register-title'>Inicio Sesión</p>
+                <form action="" method='POST'>              
+                    <div class='email-form'>
+                    <label for="email" class='email'><i class="fas fa-envelope"></i> Correo Electrónico </label>
+                    <input type="email" name='email' placeholder='micorreo@direccion.com' required>
+                    </div>  
+                    <div class='password-form'>  
+                    <label for="password" class='password'> <i class="fas fa-key"></i>Contraseña </label>
+                    <input type="password" name='password' value='password' placeholder='********' required>
+                    </div>
+                    <div class='save'>
                     <label for="save" class='save'>
                         <input type="checkbox" name='save' value='save'>
                         Guardar Contraseña
                     </label>
-                    <div class='main-button'>
-                        <button type='submit' class='button'> Iniciar Sesión </button>
-                        <div class='register'>
-                            <a href="/register" class='button'> Registrarse </a>
-                        </div>
                     </div>
+                    <div class='login-button'>
+                        <button type='submit' class='button'> Iniciar Sesión </button>
+                    </div>                 
                 </form>
+
+                <div class='register-button'>
+                    <form action="/register" method="get">
+                    <button type='submit' class='button' > Registrarse </button>
+                    </form>
+                </div>
+                
             </div>
         </section>
     </main>
-    <footer>
-        <div class='main-footer'>
-            <ul class="list-general">
-                <li class="list"><a href="/index">Home</a></li>
-                <li class="list"><a href="#">Servicios</a></li>
-                <li class="list"><a href="#">Garantía</a></li>
-                <li class="list"><a href="#">Acerca de</a></li>
-                <li class="list"><a href="#">Terminos</a></li>
-                <li class="list"><a href="#">Política de privacidad</a></li>
-            </ul>
-            <p class="copyright">Icebox © 2021</p>
-        </div>
-    </footer>
+    <%- include ('../partials/footer') %>
 
 </body>
 

@@ -1,106 +1,65 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Diego Martinez, Facundo , Luna Gatica , Pablo Guzman" content="PROYECTO INTEGRADOR GRUPO 5 ICEBOX">
     <title>ICEBOX | Registro </title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/cd7ff4f5a7.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../../public/CSS/main.css">
-    <link rel="stylesheet" href="../../../public/CSS/register.css">
+    <%- include( '../partials/head' )%>
 </head>
-
-
 <body>
-    <header class='main-header'>
-        <div class='main-header-top'>
-            <nav class='left-nav-bar'>
-                <div class='menu-button'>
-                    <a href='/menu'><i class="fas fa-bars"></i></a>
-                </div>
-            </nav>
-            <nav class='center-nav-bar'>
-                <a title='home' href='/index'><img src='../../../public/images/Logo2.svg' class='logo' alt='home'></a>
-            </nav>
-            <nav class='right-nav-bar'>
-                <div class='cart'>
-                    <a href='/productCart'><i class="fas fa-shopping-bag "></i></a>
-                </div>
-                <div class='log-in'>
-                    <a href='/login'><i class="fas fa-user-circle"></i></i></a>
-                </div>
-            </nav>
-        </div>
-    </header>
-    <section>
-        <div class='main-header-bottom'>
-            <p> ¡Envío gratis por compras mayores de 50 USD! </p>
-        </div>
-    </section>
+    <%- include( '../partials/header' )%>
     <main>
-        <section class='content'>
+        <section class='product'>
             <img src="../../../public/images/login.jpg" alt='login' class='images'>
             <div class='register'>
+                <p class='register-title'> Registrate </p>
                 <form action="" method='POST'>
 
+                    <div class='new-name-form'>
+                    <label for="name" class='name'><i class="fas fa-user-circle"></i> Nombre completo </label>
+                    <input type="text" name='name' placeholder='Nombre completo' required>
+                    </div>
+
+                    <div class='new-email-form'>
                     <label for="new-email" class='new-email'><i class="fas fa-envelope"></i> Dirección de correo
                     </label>
-                    <input type="email" name='new-email' placeholder='micorreo@direccion.com'>
+                    <input type="email" name='new-email' placeholder='micorreo@direccion.com' required>
+                    </div>
 
-                    <label for="new-password" class='new-password'> <i class="fas fa-lock"></i>Contraseña </label>
-                    <input type="password" name='new-password' placeholder='*********'>
+                    <div class='new-password-form'>
+                    <label for="new-password" class='new-password'><i class="fas fa-key"></i>Nueva contraseña </label>
+                    <input type="password" name='new-password' placeholder='*********' required>
+                    </div>
 
-                    <label for="confir-new-password" class='confir-new-password'> <i class="fas fa-lock"></i>Confirmar
+                    <div class='confir-new-password-form'>
+                    <label for="confir-new-password" class='confir-new-password'><i class="fas fa-key"></i>Confirmar
                         contraseña
                     </label>
-                    <input type="password" name='new-password' placeholder='*********'>
+                    <input type="password" name='new-password' placeholder='*********' required>
+                    </div>
 
-                    <label for="new-name" class='new-name'> <i class="fas fa-lock"></i> Nombre del usuario </label>
-                    <input type="text" name='new-name' placeholder='Diego Martínez'>
+                    <div class='image-profile-form'>
+                    <label for="image-profile" class='image-profile'><i class="fas fa-camera"></i> Imagen de perfil </label>
+                    <input type="file" name='image-profile' required>
+                    </div>
 
+                    <div class='save-promotions'>
                     <label for="save" class='send-email'>
                         <input type="checkbox" name='save' value='save'>
                         Me gustaría recibir correos con promociones, ofertas y nuevos productos
                     </label>
-                    <div class='main-button'>
+                    </div>
+                        <div class='main-button'>
                         <button type='submit' class='button'> Crear cuenta </button>
                     </div>
+                    <div class='delete-button'>
+                        <button type='reset' class='button'> Borrar datos </button>
+                    </div>  
                 </form>
             </div>
         </section>
-
-        </section>
-        <footer>
-            <div class='main-footer'>
-                <ul class="list-general">
-                    <li class="list"><a href="/index">Home</a></li>
-                    <li class="list"><a href="#">Servicios</a></li>
-                    <li class="list"><a href="#">Garantía</a></li>
-                    <li class="list"><a href="#">Acerca de</a></li>
-                    <li class="list"><a href="#">Terminos</a></li>
-                    <li class="list"><a href="#">Política de privacidad</a></li>
-                </ul>
-                <p class="copyright">Icebox © 2021</p>
-            </div>
-        </footer>
+        <%- include ('../partials/footer') %>
 </body>
 
 </html>

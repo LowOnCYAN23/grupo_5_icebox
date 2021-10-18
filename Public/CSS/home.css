@@ -4,21 +4,19 @@
   border: 0px;
 }
 
-.images {
-  min-height: 100%;
-  width: 100vw;
-  height: auto;
-}
-
 .product {
   position: relative;
-  display: block;
   text-align: center;
   font-size: 2vw;
 }
 
+.images {
+  width: 100%;
+  height: auto;
+}
+
 .product-name {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 5vw;
@@ -32,7 +30,7 @@
 }
 
 .product-description {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   padding: 5px;
   position: absolute;
   margin: 10px 0px 10px 0px;
@@ -43,14 +41,14 @@
 }
 
 .product-details {
-  font-family: 'Roboto', sans-serif;
-  padding: 10px;
+  font-family: "Roboto", sans-serif;
+  padding: 0.6rem;
   position: absolute;
-  top: 70%;
+  top: 68%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #000;
-  background-color: #fff;
+  background-color: #30fde8;
   letter-spacing: 0.07143rem;
   text-transform: uppercase;
   border-radius: 5px;
@@ -62,5 +60,5 @@
 }
 
 .product-details:hover {
-  background-color: #30fde8;
+  background-color: #fbff00;
 }

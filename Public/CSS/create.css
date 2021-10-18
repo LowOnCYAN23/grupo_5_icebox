@@ -4,7 +4,7 @@
   border: 0px;
 }
 
-.login-title {
+.create-edit-title {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
@@ -13,7 +13,7 @@
   margin: 0px 0px 20px 0px;
 }
 
-.login {
+.create-edit {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -28,38 +28,15 @@
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.34);
 }
 
-.email-form,
-.password-form {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.password-form .fas,
-.email-form .fas {
+.create-edit .fas {
   color: #30fde8;
   font-size: 1vw;
 }
 
-.password-form,
-.login-button,
-.save {
-  text-align: left;
-  margin: 20px 0px 0px 0px;
-}
-
-.register-button {
+.create-edit div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   text-align: left;
   margin: 10px 0px 0px 0px;
-}
-
-button {
-  background-color: #30fde8;
-  padding: 5px;
-  border-radius: 5px;
-  transition: all 450ms ease;
-}
-
-button:hover {
-  background-color: #fbff00;
 }
