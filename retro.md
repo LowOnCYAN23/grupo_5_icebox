@@ -8,4 +8,29 @@ Hay una incidencia con las branchs a la hora de pushear los cambios, en algunas 
 
 La falta de las entregas completas nos condujo a buscar consejo en los profesores, y rescatamos la sugerencia de detallar y asignar a cada colaborador del proyecto las tareas y trabajos de cada sprint en forma repartida a cada uno y por que cada unos exprese lo que puede lograr completar.
 
-La visual mejoró mucho al reorganizar la estructura y los estilos.
+La visual mejoró mucho al reorganizar la estructura y los 
+estilos.
+
+Retrospectiva de SPRINT 3:
+
+está fallando el envío de datos con mensaje cannot POST / register
+a la pagina register.html desde el formulario de registro a nombre de login.html, tal vez porque en register.html hay que armar un codigo para recibir los datos enviados
+
+escribí los cuatro comandos de git para commit del formulario de registro
+git init
+
+git add .
+
+git commit -m "agregado de formulario base para registro de usuarios"
+
+git push origin master
+
+cuando debí poner aparentemente
+git push origin main
+
+
+faltó el uso del archivo creado sobre la raíz de nuestro proyecto .gitignore escribiendo en el mismo lo que vamos a ignorar por ahora node_modules.
+
+
+Retrospectiva de SPRINT 4:
+
