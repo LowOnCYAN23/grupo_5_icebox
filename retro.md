@@ -34,3 +34,8 @@ faltó el uso del archivo creado sobre la raíz de nuestro proyecto .gitignore e
 
 Retrospectiva de SPRINT 4:
 
+En el sprint 4 no se alcanzo a realizar el CRUD pertinente a la modificación de archivos ni al borrado de archivos debido a que se enfoco más en terminar algunas cosas incompletas dentro del proyecto, aún la página presenta fallas en el responsive y la parte de carrito y detalles de producto falta modificarse, se actualizo la pagina de administrador en cuanto agregar productos (Es la corona que aparece en el menú).
+
+Aún existen errores dentro de mostrar los elementos que se encuentran en products.json porque al no ser responsive la página esta muestra una larga lista de lo que compone el json pero no hay una organización clara de cada elemento. Toca mejorar esto, al igual que todos los demás pendientes que existen frente al E-commerce. El tema de vistas, botones y formularios dentro del E-commerce están funcionando bien y redirigen correctamente la página que se esta pidiendo. La creación de elementos en product.json se efectua, aunque no se añadio la casilla de id:, no sabemos si esto pueda llegar a incidir dentro de las futuras funciones del e-commerce.
+
+Lo de modificar y borrar se tiene claro, pero por falta de tiempo se nos hizo imposible agregar esas funciones al e-commerce, consideramos que lo más importante es buscar hacer todos los pendientes que se tienen y tratar de ponernos al día con cada Sprint que se entrega.
