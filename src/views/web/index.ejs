@@ -10,15 +10,16 @@
 <body>
     <%- include ('../partials/header') %>
     <main>
-        <article class='product'>
+    <section class='container'>
+        <article class='product'>        
             <img src="../../../public/images/halo.jpg" alt="halo" class='images'>
-            <p class='product-name'> Halo Infinite </p>
-            <p class='product-description'> La legendaria saga Halo regresa con la campaña de Master Chief
+            <div class='product-name'> Halo Infinite </div>
+            <div class='product-description'> La legendaria saga Halo regresa con la campaña de Master Chief
                 amplia hasta la fecha y una experiencia
-                multijugador gratuita revolucionaria.</p>
+                multijugador gratuita revolucionaria.</div>
             <div class='product-details'>
                 <a href="/productDetail"> Preventa disponible</a>
-            </div>
+            </div>        
         </article>
     
         <article class='product'>
@@ -41,7 +42,7 @@
                 <a href="/productDetail"> Ver productos disponibles</a>
             </div>
         </article>
-    
+    </section>
     </main>
     <%- include ('../partials/footer') %>
 </body>
