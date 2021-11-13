@@ -13,6 +13,7 @@
     "cors": "^2.8.5",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "express-validator": "^6.13.0",
     "method-override": "^3.0.0",
     "multer": "^1.4.3",
     "mysql2": "^2.3.3-rc.0",
@@ -28,6 +29,5 @@
     "url": "https://github.com/LowOnCYAN23/grupo_5_icebox/issues"
   },
   "homepage": "https://github.com/LowOnCYAN23/grupo_5_icebox#readme",
-  "keywords": [],
-  "devDependencies": {}
+  "keywords": []
 }
