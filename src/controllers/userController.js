@@ -10,13 +10,7 @@ module.exports = {
     res.render(path.resolve(__dirname, '../views/users/register'));
   },
 
-  create: (req, res) => {
-    let usuario = {
-      nombre: req.body.name,
-      email: req.body.email,
-      password: req.body.password,
-      image: req.body.image,
-    };
-    res.redirect('/users/list');
-  },
+  create: (req, res) => {},
+
+  profile: (req, res) => {},
 };

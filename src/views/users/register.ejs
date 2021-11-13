@@ -12,8 +12,8 @@
 <body>
     <%- include( '../partials/header' )%>
         <main>
-            <section class='product'>
-                <img src="../../../public/images/login.jpg" alt='login' class='images'>
+            <div class='register-container'>
+                <img src="../../../public/images/login.jpg" alt='login' class='user-images'>
                 <div class='register'>
                     <p class='register-title'> Registrate </p>
                     <form action="/register" method='POST'>
@@ -34,7 +34,7 @@
                             <input type="password" name='password' placeholder='*********' required>
                         </div>
 
-                        <div class='confir-new-password-form'>
+                        <div class='new-password-form'>
                             <label for="password" class='password'><i class="fas fa-key"></i>Confirmar
                                 contraseña
                             </label>
@@ -62,7 +62,7 @@
                         </div>
                     </form>
                 </div>
-            </section>
+            </div>
             <%- include ('../partials/footer') %>
 </body>
 

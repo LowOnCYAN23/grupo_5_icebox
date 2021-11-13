@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,43 +8,44 @@
     <title>ICEBOX | Login</title>
     <%- include( '../partials/head' )%>
 </head>
-<body>
-    <%- include( '../partials/header' )%>  
-    <main>
-        <section class='product'>
-            <img src="../../../public/images/login.jpg" alt='login' class='images'>
-            <div class='login'>
-                <p class='register-title'>Inicio Sesión</p>
-                <form action="" method='POST'>              
-                    <div class='email-form'>
-                    <label for="email" class='email'><i class="fas fa-envelope"></i> Correo Electrónico </label>
-                    <input type="email" name='email' placeholder='micorreo@direccion.com' required>
-                    </div>  
-                    <div class='password-form'>  
-                    <label for="password" class='password'> <i class="fas fa-key"></i>Contraseña </label>
-                    <input type="password" name='password' value='password' placeholder='********' required>
-                    </div>
-                    <div class='save'>
-                    <label for="save" class='save'>
-                        <input type="checkbox" name='save' value='save'>
-                        Guardar Contraseña
-                    </label>
-                    </div>
-                    <div class='login-button'>
-                        <button type='submit' class='button'> Iniciar Sesión </button>
-                    </div>                 
-                </form>
 
-                <div class='register-button'>
-                    <form action="/register" method="get">
-                    <button type='submit' class='button' > Registrarse </button>
+<body>
+    <%- include( '../partials/header' )%>
+        <main>
+            <div class='login-container'>
+                <img src="../../../public/images/login.jpg" alt='login' class='user-images'>
+                <div class='login'>
+                    <p class='register-title'>Inicio Sesión</p>
+                    <form action="" method='POST'>
+                        <div class='email-form'>
+                            <label for="email" class='email'><i class="fas fa-envelope"></i> Correo Electrónico </label>
+                            <input type="email" name='email' placeholder='micorreo@direccion.com' required>
+                        </div>
+                        <div class='password-form'>
+                            <label for="password" class='password'> <i class="fas fa-key"></i>Contraseña </label>
+                            <input type="password" name='password' value='password' placeholder='********' required>
+                        </div>
+                        <div class='save'>
+                            <label for="save" class='save'>
+                                <input type="checkbox" name='save' value='save'>
+                                Guardar Contraseña
+                            </label>
+                        </div>
+                        <div class='login-button'>
+                            <button type='submit' class='button'> Iniciar Sesión </button>
+                        </div>
                     </form>
+
+                    <div class='register-button'>
+                        <form action="/register" method="get">
+                            <button type='submit' class='button'> Registrarse </button>
+                        </form>
+                    </div>
+
                 </div>
-                
             </div>
-        </section>
-    </main>
-    <%- include ('../partials/footer') %>
+        </main>
+        <%- include ('../partials/footer') %>
 
 </body>
 

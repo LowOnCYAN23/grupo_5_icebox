@@ -5,61 +5,53 @@
 }
 
 .login-title {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 1.2vw;
+  font-size: 25px;
   color: #fff;
   margin: 0px 0px 20px 0px;
 }
 
-.login {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 1vw;
-  color: #fff;
-  background-color: #000;
-  padding: 20px;
-  border-radius: 5px;
+.login-container {
+  position: relative;
+  display: inline-block;
   text-align: center;
-  font-family: "Roboto", sans-serif;
-  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.34);
 }
 
-.email-form,
-.password-form {
+.login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 20px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  height: auto;
+  width: 25%;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+input[type='email'],
+input[type='password'] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  resize: vertical;
+}
+
+.login .fas {
+  color: #30fde8;
+  font-size: 15px;
+}
+
+.login div {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
-
-.password-form .fas,
-.email-form .fas {
-  color: #30fde8;
-  font-size: 1vw;
-}
-
-.password-form,
-.login-button,
-.save {
   text-align: left;
-  margin: 20px 0px 0px 0px;
-}
-
-.register-button {
-  text-align: left;
-  margin: 10px 0px 0px 0px;
-}
-
-button {
-  background-color: #30fde8;
-  padding: 5px;
-  border-radius: 5px;
-  transition: all 450ms ease;
-}
-
-button:hover {
-  background-color: #fbff00;
+  margin: 5px 0px 0px 0px;
 }

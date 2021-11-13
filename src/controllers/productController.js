@@ -24,12 +24,8 @@ module.exports = {
   },
 
   createProduct: (req, res) => {
-    let product = {
-      Nombre_Producto: req.body.products,
-      Descripción: req.body.description,
-      Imagen: req.body.productimage,
-      Precio: req.body.price,
-    };
+    let product = req.body;
+
     let listProducts = fs.readFileSync('products.json', { encoding: 'utf-8' });
     let products;
     if (listProducts == '') {

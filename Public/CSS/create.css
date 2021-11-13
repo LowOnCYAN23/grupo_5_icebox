@@ -4,39 +4,56 @@
   border: 0px;
 }
 
-.create-edit-title {
-  font-family: "Roboto", sans-serif;
+.crud-title {
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 1.2vw;
+  font-size: 25px;
   color: #fff;
   margin: 0px 0px 20px 0px;
 }
 
-.create-edit {
+.crud-container {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.crud {
   position: absolute;
-  top: 40%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 1vw;
-  color: #fff;
+  margin-top: 20px;
   background-color: #000;
+  color: #fff;
+  border-radius: 10px;
   padding: 20px;
-  border-radius: 5px;
+  height: auto;
+  width: 30%;
   text-align: center;
-  font-family: "Roboto", sans-serif;
-  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.34);
+  font-family: 'Roboto', sans-serif;
 }
 
-.create-edit .fas {
+input[type='price'],
+input[type='number'],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  resize: vertical;
+  font-family: 'Roboto', sans-serif;
+}
+
+.crud .fas {
   color: #30fde8;
-  font-size: 1vw;
+  font-size: 15px;
 }
 
-.create-edit div {
+.crud div {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  margin: 10px 0px 0px 0px;
+  margin: 5px 0px 0px 0px;
 }

@@ -62,7 +62,7 @@ a:hover {
 }
 
 .main-header-bottom {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   text-align: center;
   color: #000;
   background-color: #30fde8;
@@ -108,7 +108,7 @@ a:hover {
 .main-footer-top,
 .footer-bottom {
   position: relative;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 0.7rem;
   display: flex;
   flex-direction: row;
@@ -130,4 +130,22 @@ a:hover {
 
 .copyright {
   text-align: center;
+}
+
+@media (max-width: 700px) {
+  .footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 700px) {
+  .cart,
+  .admon {
+    display: inline-block;
+  }
+  .logo {
+    margin-left: 90px;
+  }
 }
