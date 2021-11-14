@@ -19,25 +19,37 @@
                     <form action="" method='POST'>
                         <div class='email-form'>
                             <label for="email" class='email'><i class="fas fa-envelope"></i> Correo Electrónico </label>
-                            <input type="email" name='email' placeholder='micorreo@direccion.com' required>
+                            <input type="text" name='email' placeholder='micorreo@direccion.com'
+                                value="<%= locals.oldData ? oldData.email : null %>">
                         </div>
-                        <div class='password-form'>
-                            <label for="password" class='password'> <i class="fas fa-key"></i>Contraseña </label>
-                            <input type="password" name='password' value='password' placeholder='********' required>
-                        </div>
-                        <div class='save'>
-                            <label for="save" class='save'>
-                                <input type="checkbox" name='save' value='save'>
-                                Guardar Contraseña
-                            </label>
-                        </div>
-                        <div class='login-button'>
-                            <button type='submit' class='button'> Iniciar Sesión </button>
-                        </div>
+                        <% if (locals.errors && errors.email){ %>
+                            <div class='text-danger'>
+                                <%= errors.email.msg %>
+                            </div>
+                            <% } %>
+                                <div class='password-form'>
+                                    <label for="password" class='password'> <i class="fas fa-key"></i>Contraseña
+                                    </label>
+                                    <input type="password" name='password' placeholder='********'>
+                                </div>
+                                <% if (locals.errors && errors.password){ %>
+                                    <div class='text-danger'>
+                                        <%= errors.password.msg %>
+                                    </div>
+                                    <% } %>
+                                        <div class='save'>
+                                            <label for="save" class='save'>
+                                                <input type="checkbox" name='save' value='save'>
+                                                Guardar Contraseña
+                                            </label>
+                                        </div>
+                                        <div class='login-button'>
+                                            <button type='submit' class='button'> Iniciar Sesión </button>
+                                        </div>
                     </form>
 
                     <div class='register-button'>
-                        <form action="/register" method="get">
+                        <form action="/register" method="GET">
                             <button type='submit' class='button'> Registrarse </button>
                         </form>
                     </div>

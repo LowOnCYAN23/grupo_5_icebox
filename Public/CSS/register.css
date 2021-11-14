@@ -41,6 +41,11 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.registerComplete {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
 input[type='text'],
 input[type='email'],
 input[type='password'],
