@@ -39,3 +39,16 @@ En el sprint 4 no se alcanzo a realizar el CRUD pertinente a la modificación de
 Aún existen errores dentro de mostrar los elementos que se encuentran en products.json porque al no ser responsive la página esta muestra una larga lista de lo que compone el json pero no hay una organización clara de cada elemento. Toca mejorar esto, al igual que todos los demás pendientes que existen frente al E-commerce. El tema de vistas, botones y formularios dentro del E-commerce están funcionando bien y redirigen correctamente la página que se esta pidiendo. La creación de elementos en product.json se efectua, aunque no se añadio la casilla de id:, no sabemos si esto pueda llegar a incidir dentro de las futuras funciones del e-commerce.
 
 Lo de modificar y borrar se tiene claro, pero por falta de tiempo se nos hizo imposible agregar esas funciones al e-commerce, consideramos que lo más importante es buscar hacer todos los pendientes que se tienen y tratar de ponernos al día con cada Sprint que se entrega.
+
+
+RETROSPECTIVA  Sprint 5 :
+1. Comenzar a hacer.
+2. Hacer más.
+3. Continuar haciendo.
+4. Hacer menos.
+5. Dejar de hacer.
+1)Procuramos formar todos los puntos pedidos en este sprint empezando a dar forma a la estructura de los directorios en función al uso de Sequelize y Heroku.
+2)Con los dos videos finales de middlewares de playground paso a paso se hicieron todas las consignas.
+3)Repartir las tareas por más que no sepan realizarlas los integrantes del grupo.
+4)Posponer las tareas para lo último.
+5)No acercarnos a pedir más ayuda entre los integrantes.
