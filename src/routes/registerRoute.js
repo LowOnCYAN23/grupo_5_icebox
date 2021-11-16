@@ -4,16 +4,14 @@ const userController = require('../controllers/userController');
 
 const validations = require('../../middlewares/validateRegisterMiddleware');
 const uploadFile = require('../../middlewares/multerMiddleware');
+const guest = require('../../middlewares/guestMiddleware');
 
-router.get('/', userController.register);
+router.get('/', guest, userController.register);
 router.post(
   '/',
   uploadFile.single('image'),
   validations,
   userController.processRegister
 );
-
-router.post('/', userController.createUser);
-router.get('/profile/:userid', userController.profile);
 
 module.exports = router;
