@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  border: 0px;
+}
+
+.main-header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+  width: 100%;
+}
+
+.main-header-top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000;
+  height: 80px;
+  padding: 0px 40px 0px 40px;
+}
+
+.logo {
+  max-width: 90px;
+  text-align: center;
+  width: 100%;
+  padding: 7px;
+  margin: 3px 0px 3px 0px;
+}
+
+.right-nav-bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.welcome-user {
+  color: #30fde8;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding: 15px;
+}
+
+.cart,
+.log-in,
+.log-out,
+.admon,
+.register-nav,
+.menu-button {
+  padding: 10px;
+}
+
+.cart,
+.admon {
+  display: none;
+}
+
+a {
+  color: #30fde8;
+  text-decoration: none;
+  pointer-events: auto;
+}
+
+a:hover {
+  color: #fbff00;
+  pointer-events: auto;
+}
+
+.main-header-bottom {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  color: #000;
+  background-color: #30fde8;
+  border-top: #fff 3px solid;
+  padding: 5px;
+  font-size: 0.7rem;
+  transition: all 450ms ease;
+}
+
+.main-header-bottom:hover {
+  background-color: #fbff00;
+}
+
+.fas {
+  color: #30fde8;
+  font-size: 1.5rem;
+  transition: all 450ms ease;
+}
+
+.fas:hover {
+  color: #fbff00;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.main-footer {
+  position: fixed;
+  bottom: 0;
+  color: #fff;
+  text-align: center;
+  background-color: #000;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main-footer-top,
+.footer-bottom {
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.7rem;
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  padding: 5px;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -20px;
+}
+
+.buttons-footer {
+  margin: 0px 20px 0px 20px;
+  display: inline-block;
+  text-align: center;
+}
+
+.copyright {
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 700px) {
+  .cart,
+  .admon {
+    display: inline-block;
+  }
+  .logo {
+    margin-left: 90px;
+  }
+}

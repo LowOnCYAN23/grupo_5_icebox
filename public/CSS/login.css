@@ -4,7 +4,7 @@
   border: 0px;
 }
 
-.crud-title {
+.login-title {
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   font-weight: bold;
@@ -13,15 +13,15 @@
   margin: 0px 0px 20px 0px;
 }
 
-.crud-container {
+.login-container {
   position: relative;
   display: inline-block;
   text-align: center;
 }
 
-.crud {
+.login {
   position: absolute;
-  top: 55%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin-top: 20px;
@@ -30,27 +30,25 @@
   border-radius: 10px;
   padding: 20px;
   height: auto;
-  width: 30%;
+  width: 25%;
   text-align: center;
   font-family: 'Roboto', sans-serif;
 }
 
-input[type='price'],
-input[type='number'],
-textarea {
+input[type='email'],
+input[type='password'] {
   width: 100%;
   padding: 12px;
   border-radius: 10px;
   resize: vertical;
-  font-family: 'Roboto', sans-serif;
 }
 
-.crud .fas {
+.login .fas {
   color: #30fde8;
   font-size: 15px;
 }
 
-.crud div {
+.login div {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
