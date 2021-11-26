@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "",
-    "database": "data",
+    "password": "Bl@nco",
+    "database": "icebox_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
