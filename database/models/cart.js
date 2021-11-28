@@ -1,7 +1,7 @@
 
 module.exports = function (sequelize, dataTypes) {
 
-    let alias = "Cart";
+    let alias = "CartTable";
 
     let cols = {
 
@@ -38,7 +38,13 @@ module.exports = function (sequelize, dataTypes) {
 
     };
     
-    let Cart = sequelize.define(alias, cols, config) {
-        //faltan poner relaciones a las tablas
+    let Cart = sequelize.define(alias, cols, config)
+
+    Cart.associate = function (models) {
+        Cart.belongsTo(models.UsersTable),
+        Cart.belongsTo(models.ProductsTable),
+        Cart.belongsTo(models.ProductsTable),
+        Cart.hasMany(models.PorchaseOrdersTable)
     }
+    return Cart;
 }

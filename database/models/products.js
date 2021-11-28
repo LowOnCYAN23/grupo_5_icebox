@@ -1,4 +1,3 @@
-
 module.exports = function (sequelize,dataTypes) {
     //VARIABLE DE NOMBRE DE TABLA PARA SEQUELIZE
     let alias = "ProductsTable";
@@ -60,10 +59,10 @@ module.exports = function (sequelize,dataTypes) {
     let Products = sequelize.define(alias, cols, config);
 
     Products.associate = function(models) {
-        Products.hasMany(models.ColorTable),
-        Products.hasMany(models.CategoryTable),
-        Products.hasMany(models.MarkTable),
-        Products.hasMany(models.GenreTable)
+        Products.belongsTo(models.ColorsTable),
+        Products.belongsTo(models.CategoriesTable),
+        Products.belongsTo(models.TradeMarksTable),
+        Products.belongsTo(models.GenresTable)
         //REVISAR ESTE BLOQUE DE RELACIONES SI ESTÁ BIEN CONCATENADO AL TENER MAS DE UNA RELACIÓN EN UNA MISMA TABLA
     }
 
