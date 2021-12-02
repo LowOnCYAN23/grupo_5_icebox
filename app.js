@@ -4,7 +4,7 @@ const path = require('path');
 const cors = require('cors');
 const methodOverride = require('method-override');
 const session = require('express-session');
-const cookie = require('cookie-parser');
+//const cookie = require('cookie-parser');
 
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
