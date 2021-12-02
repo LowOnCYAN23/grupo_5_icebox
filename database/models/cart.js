@@ -47,4 +47,4 @@ module.exports = function (sequelize, dataTypes) {
         Cart.hasMany(models.PorchaseOrdersTable)
     }
     return Cart;
-}
+};
