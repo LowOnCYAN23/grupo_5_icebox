@@ -14,6 +14,7 @@
         <main>
             <div class='product-crud-container'>
                 <img src="../../../public/images/login.jpg" alt='login' class='user-images'>
+                <img src="../../../public/images/login.jpg" alt='login' class='user-images'>
                 <div class='crud'>
                     <p class='crud-title'> CRUD de productos </p>
                     <form action="/admon" method='POST'>
@@ -21,7 +22,7 @@
                         <div class='create-form'>
                             <label for="products" class='products'><i class="fas fa-archive"></i> Nuevo producto
                             </label>
-                            <input type="text" name='name-product' placeholder='Nombre del nuevo producto' required>
+                            <input type="text" name='name_product' placeholder='Nombre del nuevo producto' required>
                         </div>
 
                         <div class='description-form'>
@@ -38,9 +39,79 @@
                         </div>
 
                         <div class='price-form'>
-                            <label for="price" class='price'><i class="fas fa-money-bill-wave-alt"></i> Precio </label>
+                            <label for="price" class='price'><i class="fas fa-money-bill-wave-alt"></i> Precio del
+                                producto </label>
                             <input type="number" name='price' placeholder='$123.45' required>
                         </div>
+
+                        <div class='color-form'>
+                            <label for="color" class='color'><i class="fas fa-fill-drip"></i> Color del producto
+                            </label>
+                            <select name="color" id="color">
+                                <option value="red" selected>Rojo</option>
+                                <option value="white">Blanco</option>
+                                <option value="brown">Café</option>
+                                <option value="pink">Rosado</option>
+                                <option value="yellow">Amarillo</option>
+                                <option value="gray">Gris</option>
+                                <option value="green">Verde</option>
+                                <option value="purple">Morado</option>
+                                <option value="black">Negro</option>
+                                <option value="blue">Azul</option>
+                            </select>
+                        </div>
+
+                        <div class='category-form'>
+                            <label for="category" class='category'><i class="fas fa-gamepad"></i> Categoria del producto
+                            </label>
+                            <select name="category" id="category">
+                                <option value="accesoriesConsoles" selected> Accesorios para Consolas </option>
+                                <option value="componentsPC"> Componentes de PC </option>
+                                <option value="tablets"> Tablets y accesorios </option>
+                                <option value="others"> Otros </option>
+                                <option value="videogames"> Videojuegos </option>
+                                <option value="sparePartsPC"> Repuestos de PC Gaming </option>
+                                <option value="sparePartsConsoles">Repuestos de Consolas </option>
+                                <option value="machines"> Máquinas de juegos </option>
+                                <option value="consoles"> Consolas </option>
+                                <option value="accesoriesPC"> Accesorios para PC Gaming</option>
+                            </select>
+                        </div>
+
+                        <div class='trademark-form'>
+                            <label for="trademark" class='trademark'><i class="fas fa-feather-alt"></i> Marca del
+                                producto </label>
+                            <select name="trademark" id="trademark">
+                                <option value="activision" selected> Activision </option>
+                                <option value="atari"> Atari </option>
+                                <option value="bandai"> Bandai </option>
+                                <option value="blizzard"> Blizzard </option>
+                                <option value="riotGames"> Riot Games </option>
+                                <option value="capcom"> Capcom </option>
+                                <option value="epicGames"> Epic Games </option>
+                                <option value="konami"> Konami </option>
+                                <option value="microsoft"> Microsoft </option>
+                                <option value="nintendo"> Nintendo </option>
+                            </select>
+                        </div>
+
+
+                        <div class='genre-form'>
+                            <label for="genre" class='genre'><i class="fas fa-dice"></i> Género del producto </label>
+                            <select name="genre" id="genre">
+                                <option value="terror" selected> Terror </option>
+                                <option value="shooter"> Shooters </option>
+                                <option value="racing"> Carreras </option>
+                                <option value="rol"> Rol </option>
+                                <option value="boardGames"> Juegos de mesa </option>
+                                <option value="simulation"> Simulación </option>
+                                <option value="strategy"> Estrategia </option>
+                                <option value="sports"> Deportes </option>
+                                <option value="arcade"> Arcade </option>
+                                <option value="action"> Acción </option>
+                            </select>
+                        </div>
+
                         <div class='crud-buttons'>
                             <div class='create-button'>
                                 <button type='submit' class='button'> Crear producto </button>

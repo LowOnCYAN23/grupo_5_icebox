@@ -13,7 +13,7 @@
   margin: 0px 0px 20px 0px;
 }
 
-.crud-container {
+.product-crud-container {
   position: relative;
   display: inline-block;
   text-align: center;
@@ -23,8 +23,7 @@
   position: absolute;
   top: 55%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  margin-top: 20px;
+  transform: translate(-50%, -80%);
   background-color: #000;
   color: #fff;
   border-radius: 10px;
@@ -37,6 +36,8 @@
 
 input[type='price'],
 input[type='number'],
+input[type='file'],
+select,
 textarea {
   width: 100%;
   padding: 12px;

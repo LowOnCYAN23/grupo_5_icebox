@@ -1,5 +1,6 @@
 const path = require('path');
 let fs = require('fs');
+const db = require('../../database/models');
 
 module.exports = {
   detail: (req, res) => {
@@ -24,18 +25,16 @@ module.exports = {
   },
 
   createProduct: (req, res) => {
-    let product = req.body;
-
-    let listProducts = fs.readFileSync('products.json', { encoding: 'utf-8' });
-    let products;
-    if (listProducts == '') {
-      products = [];
-    } else {
-      products = JSON.parse(listProducts);
-    }
-    products.push(products);
-    productsJSON = JSON.stringify(products);
-    fs.writeFileSync('products.json', productsJSON);
+    db.Product.create({
+      name_product: req.body.name_product,
+      description_product: req.body.description_product,
+      product_image: req.body.product_image,
+      price: req.body.price,
+      color: req.body.color,
+      category: req.body.category,
+      trademark: req.body.trademark,
+      genre: req.body.genre,
+    }).then(() => res.redirect('/products'));
   },
 
   readProduct: (req, res) => {
