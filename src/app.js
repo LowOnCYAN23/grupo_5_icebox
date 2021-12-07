@@ -10,16 +10,16 @@ const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 const publicPath = path.resolve(__dirname, './public');
 
-const homeRoute = require('./src/routes/homeRoute');
-const loginRoute = require('./src/routes/loginRoute');
-const logoutRoute = require('./src/routes/logoutRoute');
-const registerRoute = require('./src/routes/registerRoute');
-const userProfileRoute = require('./src/routes/userProfileRoute');
-const admonRoute = require('./src/routes/admonRoute');
-const indexRoute = require('./src/routes/indexRoute');
-const productRoute = require('./src/routes/admonRoute');
-const cartRoute = require('./src/routes/cartRoute');
-const listRoute = require('./src/routes/listRoute');
+const homeRoute = require('./routes/homeRoute');
+const loginRoute = require('./routes/loginRoute');
+const logoutRoute = require('./routes/logoutRoute');
+const registerRoute = require('./routes/registerRoute');
+const userProfileRoute = require('./routes/userProfileRoute');
+const admonRoute = require('./routes/admonRoute');
+const indexRoute = require('./routes/indexRoute');
+const productRoute = require('./routes/admonRoute');
+const cartRoute = require('./routes/cartRoute');
+const listRoute = require('./routes/listRoute');
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './views'));
