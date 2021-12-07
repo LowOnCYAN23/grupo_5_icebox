@@ -1,8 +1,8 @@
 module.exports = function (sequelize, dataTypes) {
   //VARIABLE DE NOMBRE DE TABLA PARA SEQUELIZE
-  let alias = 'ProductsTable';
+  const alias = 'ProductsTable';
   //VARIABLE DE ATRIBUTOS CON SUS PROPIEDADES PARA CADA COLUMNA A USAR EN EL PROYECTO
-  let cols = {
+  const cols = {
     id_product: {
       type: dataTypes.INTEGER,
       primaryKey: true,
@@ -48,17 +48,17 @@ module.exports = function (sequelize, dataTypes) {
     },
   };
   //VARIABLE DE CONFIGURACIÓN (timestamps no se para que sirve)
-  let config = {
+  const config = {
     tableName: 'products', //nombre en la db de mysql
     timestamps: false,
   };
 
-  let Products = sequelize.define(alias, cols, config);
+  const Products = sequelize.define(alias, cols, config);
 
   Products.associate = function (models) {
     Products.belongsTo(models.ColorsTable),
-      Products.belongsTo(models.CategoriesTable),
-      Products.belongsTo(models.TradeMarksTable),
+      Products.belongsTo(models.CategoryTable),
+      Products.belongsTo(models.TrademarksTable),
       Products.belongsTo(models.GenresTable);
     //REVISAR ESTE BLOQUE DE RELACIONES SI ESTÁ BIEN CONCATENADO AL TENER MAS DE UNA RELACIÓN EN UNA MISMA TABLA
   };

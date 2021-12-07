@@ -1,6 +1,11 @@
 const path = require('path');
 let fs = require('fs');
+<<<<<<< HEAD
 const db = require('../database/models');
+=======
+const db = require('../../database/models');
+//const sequelize = db.sequelize;
+>>>>>>> 2f349b8b21777667f9a6c82e8e67f2e925a4dd50
 
 module.exports = {
   detail: (req, res) => {
@@ -18,14 +23,13 @@ module.exports = {
   },
 
   list: (req, res) => {
-    let listProducts = fs.readFileSync('products.json', { encoding: 'utf-8' });
-    res.render(path.resolve(__dirname, '../views/products/products'), {
-      listProducts: listProducts,
+    db.ProductsTable.findAll().then((products) => {
+      res.render('products.ejs', { products });
     });
   },
 
   createProduct: (req, res) => {
-    db.Product.create({
+    db.ProductsTable.create({
       name_product: req.body.name_product,
       description_product: req.body.description_product,
       product_image: req.body.product_image,
@@ -34,11 +38,7 @@ module.exports = {
       category: req.body.category,
       trademark: req.body.trademark,
       genre: req.body.genre,
-    }).then(() => res.redirect('/products'));
-  },
-
-  readProduct: (req, res) => {
-    let products;
+    }).then(() => res.redirect('/home'));
   },
 
   editProduct: (req, res) => {

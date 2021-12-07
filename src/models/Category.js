@@ -1,31 +1,28 @@
 module.exports = function (sequelize, dataTypes) {
+  let alias = 'CategoryTable';
 
-    let alias = "CategoriesTable";
+  let cols = {
+    id_category: {
+      type: dataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+      notNull: true,
+    },
+    name: {
+      type: dataTypes.STRING,
+      notNull: true,
+    },
+  };
 
-    let cols = {
+  let config = {
+    tableName: 'categories',
+    timestamps: false,
+  };
 
-        id_category: {
-            type: dataTypes.INTEGER,
-            primaryKey: true,
-            autoIncrement: true,
-            notNull: true
-        },
-        name: {
-            type: dataTypes.STRING,
-            notNull: true
-        }
-    };
+  let Category = sequelize.define(alias, cols, config);
 
-    let config = {
-        tableName: "categories",
-        timestamps: false
-    };
-
-    let Category = sequelize.define(alias, cols, config);
-
-    Category.associate = function (models) {
-        Category.hasMany(models.ProductsTable)
-    }
-    return Category
-    ;
+  Category.associate = function (models) {
+    Category.hasMany(models.ProductsTable);
+  };
+  return Category;
 };
