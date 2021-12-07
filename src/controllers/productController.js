@@ -1,11 +1,6 @@
 const path = require('path');
 let fs = require('fs');
-<<<<<<< HEAD
 const db = require('../database/models');
-=======
-const db = require('../../database/models');
-//const sequelize = db.sequelize;
->>>>>>> 2f349b8b21777667f9a6c82e8e67f2e925a4dd50
 
 module.exports = {
   detail: (req, res) => {
