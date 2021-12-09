@@ -18,7 +18,7 @@
 }
 
 .product-name {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 5vw;
@@ -32,7 +32,7 @@
 }
 
 .product-description {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   padding: 5px;
   position: absolute;
   margin: 10px 0px 10px 0px;
@@ -43,7 +43,7 @@
 }
 
 .product-details {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   padding: 0.6rem;
   position: absolute;
   top: 68%;

@@ -111,28 +111,31 @@
                                 <option value="action"> Acción </option>
                             </select>
                         </div>
-
-                        <div class='crud-buttons'>
-                            <div class='create-button'>
-                                <button type='submit' class='button'> Crear producto </button>
-                            </div>
-                            <div class='modify-button'>
-                                <button type='submit' class='button'> Modificar producto </button>
-                            </div>
-                            <div class='delete-button'>
-                                <button type='reset' class='button'> Borrar datos </button>
-                            </div>
                     </form>
-                    <div class='list-button'>
-                        <form action="/products" method="get">
-                            <button type='submit' class='button'> Lista de Productos </button>
+                    <div class='crud-buttons'>
+
+                        <div class='create-button'>
+                            <form action="/products" method="POST">
+                                <button type='submit' class='button'> Crear producto </button>
+                            </form>
+                        </div>
+                        <div class='modify-button'>
+                            <button type='submit' class='button'> Modificar producto </button>
+                        </div>
+                        <div class='delete-button'>
+                            <button type='reset' class='button'> Borrar datos </button>
+                        </div>
                         </form>
+                        <div class='list-button'>
+                            <form action="/products" method="get">
+                                <button type='submit' class='button'> Lista de Productos </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
 
 
-            <%- include ('../partials/footer') %>
+                <%- include ('../partials/footer') %>
 </body>
 
 </html>

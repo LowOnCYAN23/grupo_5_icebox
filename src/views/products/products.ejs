@@ -15,9 +15,14 @@
             <section class='product'>
                 <img src="../../../public/images/login.jpg" alt='login' class='images'>
                 <div class='list-products'>
-                    <% for (let i=0 ; i<listProducts.length;i++){ %>
-                        <%= listProducts[i] %>
-                            <% }%>
+                    <i class="fas fa-info-circle"></i>
+                    <h2>LISTADO DE PRODUCTOS</h2>
+                    <br>
+                    <% for (let i=0 ; i<list.length;i++){ %>
+                        <li>
+                            <%= list[i].name_product %>
+                        </li>
+                        <% }%>
                 </div>
             </section>
             <%- include ('../partials/footer') %>

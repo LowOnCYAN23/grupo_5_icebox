@@ -1,6 +1,6 @@
 const path = require('path');
 const { validationResult } = require('express-validator');
-const User = require('../database/models/User');
+//const Users = require('../database/models/Users');
 const bcryptjs = require('bcryptjs');
 
 module.exports = {
@@ -75,7 +75,7 @@ module.exports = {
       password: bcryptjs.hashSync(req.body.password, 10),
       avatar: req.file.filename,
     };
-    User.createUser(userToCreate);
+    Users.createUser(userToCreate);
     return res.redirect(path.resolve(__dirname, '../views/users/login'));
   },
 

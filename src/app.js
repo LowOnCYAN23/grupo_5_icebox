@@ -6,9 +6,9 @@ const methodOverride = require('method-override');
 const session = require('express-session');
 const cookie = require('cookie-parser');
 
-const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+//const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
-const publicPath = path.resolve(__dirname, './public');
+const publicPath = path.resolve(__dirname, '../public');
 
 const homeRoute = require('./routes/homeRoute');
 const loginRoute = require('./routes/loginRoute');
@@ -33,7 +33,7 @@ app.use(
   session({ secret: 'Secret Message', resave: false, saveUninitialized: false })
 );
 app.use(cookie());
-app.use(userLoggedMiddleware);
+//app.use(userLoggedMiddleware);
 
 app.use('/', homeRoute);
 app.use('/login', loginRoute);
