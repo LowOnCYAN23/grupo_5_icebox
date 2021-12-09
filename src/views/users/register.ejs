@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICEBOX | Registro </title>
+    <%- include( '../partials/head' )%>
+</head>
+
+<body>
+    <%- include( '../partials/header' )%>
+        <main>
+            <div class='register-container'>
+                <img src="../../../public/images/login.jpg" alt='login' class='user-images'>
+                <div class='register'>
+                    <p class='register-title'> Registrate </p>
+                    <form action="/register" method='POST' enctype="multipart/form-data">
+                        <div class='new-name-form'>
+                            <label for="name" class='name'><i class="fas fa-user-circle"></i> Nombre completo </label>
+                            <input type="text" name='name' value="<%= locals.oldData ? oldData.name : null %>"
+                                placeholder='Nombre completo'>
+                        </div>
+                        <% if (locals.errors && errors.name){ %>
+                            <div class='text-danger'>
+                                <%= errors.name.msg %>
+                            </div>
+                            <% } %>
+                                <div class='new-email-form'>
+                                    <label for="email" class='email'><i class="fas fa-envelope"></i> Correo electrónico
+                                    </label>
+                                    <input type="email" name='email'
+                                        value="<%= locals.oldData ? oldData.email : null %>"
+                                        placeholder='micorreo@direccion.com'>
+                                </div>
+                                <% if (locals.errors && errors.email){ %>
+                                    <div class='text-danger'>
+                                        <%= errors.email.msg %>
+                                    </div>
+                                    <% } %>
+
+                                        <div class='new-password-form'>
+                                            <label for="password" class='password'><i class="fas fa-key"></i>Nueva
+                                                contraseña
+                                            </label>
+                                            <input type="password" name='password' placeholder='*********'>
+                                        </div>
+                                        <% if (locals.errors && errors.password){ %>
+                                            <div class='text-danger'>
+                                                <%= errors.password.msg %>
+                                            </div>
+                                            <% } %>
+
+                                                <div class='image-profile-form'>
+                                                    <label for="image" class='image'><i class="fas fa-camera"></i>
+                                                        Imagen de
+                                                        perfil </label>
+                                                    <input type="file" name='image'>
+                                                </div>
+                                                <% if (locals.errors && errors.image){ %>
+                                                    <div class='text-danger'>
+                                                        <%= errors.image.msg %>
+                                                    </div>
+                                                    <% } %>
+
+                                                        <div class='save-promotions'>
+                                                            <label for="save" class='send-email'>
+                                                                <input type="checkbox" name='save' value='yes'>
+                                                                Me gustaría recibir correos con promociones, ofertas y
+                                                                nuevos
+                                                                productos
+                                                            </label>
+                                                        </div>
+
+                                                        <div class='main-button'>
+                                                            <button type='submit' class='button'> Crear cuenta </button>
+                                                        </div>
+                                                        <div class='delete-button'>
+                                                            <button type='reset' class='button'> Borrar datos </button>
+                                                        </div>
+                    </form>
+                </div>
+            </div>
+            <%- include ('../partials/footer') %>
+</body>
+
+</html>

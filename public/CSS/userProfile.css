@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  border: 0px;
+}
+
+.user-title {
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 25px;
+  color: #fff;
+}
+
+.userProfile-container {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.user {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 20px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  height: auto;
+  width: 25%;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.userProfile-image {
+  border-radius: 500px;
+  width: 200px;
+  height: auto;
+}

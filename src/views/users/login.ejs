@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICEBOX | Login</title>
+    <%- include( '../partials/head' )%>
+</head>
+
+<body>
+    <%- include( '../partials/header' )%>
+        <main>
+            <div class='login-container'>
+                <img src="../../../public/images/login.jpg" alt='login' class='user-images'>
+                <div class='login'>
+                    <p class='register-title'>Inicio Sesión</p>
+                    <form action="" method='POST'>
+                        <div class='email-form'>
+                            <label for="email" class='email'><i class="fas fa-envelope"></i> Correo Electrónico </label>
+                            <input type="text" name='email' placeholder='micorreo@direccion.com'
+                                value="<%= locals.oldData ? oldData.email : null %>">
+                        </div>
+                        <% if (locals.errors && errors.email){ %>
+                            <div class='text-danger'>
+                                <%= errors.email.msg %>
+                            </div>
+                            <% } %>
+                                <div class='password-form'>
+                                    <label for="password" class='password'> <i class="fas fa-key"></i>Contraseña
+                                    </label>
+                                    <input type="password" name='password' placeholder='********'>
+                                </div>
+                                <% if (locals.errors && errors.password){ %>
+                                    <div class='text-danger'>
+                                        <%= errors.password.msg %>
+                                    </div>
+                                    <% } %>
+                                        <div class='save'>
+                                            <label for="save" class='save'>
+                                                <input type="checkbox" name='saveUser'>
+                                                Recordar usuario
+                                            </label>
+                                        </div>
+                                        <div class='login-button'>
+                                            <button type='submit' class='button'> Iniciar Sesión </button>
+                                        </div>
+                    </form>
+
+                    <div class='register-button'>
+                        <form action="/register" method="GET">
+                            <button type='submit' class='button'> Registrarse </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+        <%- include ('../partials/footer') %>
+
+</body>
+
+</html>

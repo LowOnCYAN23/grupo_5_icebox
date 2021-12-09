@@ -1,0 +1,44 @@
+<header class='main-header'>
+    <div class='main-header-top'>
+        <nav class='left-nav-bar'>
+            <div class='menu-button'>
+                <a href='#'><i class="fas fa-bars"></i></a>
+            </div>
+        </nav>
+        <nav class='center-nav-bar'>
+            <a title='home' href="/index"><img src='../../../public/images/Logo2.svg' class='logo' alt='home'></a>
+        </nav>
+        <nav class='right-nav-bar'>
+            <% if (locals.isLogged){ %>
+                <img src="../../../public/images/profileImages/<%= locals.userLogged.avatar %>" width="40"
+                    style='border-radius: 100%;'>
+                <div class='welcome-user'>
+                    <%= locals.userLogged.name %>
+                </div>
+
+                <div class='cart'>
+                    <a href='/productCart'><i class="fas fa-shopping-cart"></i></a>
+                </div>
+                <div class='admon'>
+                    <a href="/admon"><i class="fas fa-crown"></i></a>
+                </div>
+                <div class='log-out'>
+                    <a href='/logout'><i class="fas fa-sign-out-alt"></i></a>
+                </div>
+                <% } else { %>
+                    <div class='log-in'>
+                        <a href='/login'><i class="fas fa-sign-in-alt"></i></a>
+                    </div>
+                    <div class='register-nav'>
+                        <a href='/register'><i class="fas fa-user-circle"></i></a>
+                    </div>
+                    <% } %>
+
+        </nav>
+    </div>
+    <section>
+        <div class='main-header-bottom'>
+            <p> ¡Envío gratis por compras mayores de 50 USD! </p>
+        </div>
+    </section>
+</header>

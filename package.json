@@ -1,0 +1,40 @@
+{
+  "name": "pablo",
+  "version": "1.0.0",
+  "description": "Repositorio // Grupo 5 DH 2021\r ---",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/app.js"
+  },
+  "author": "pablo",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie": "^0.4.1",
+    "cookie-parse": "^0.4.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "express-validator": "^6.13.0",
+    "method-override": "^3.0.0",
+    "multer": "^1.4.3",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15",
+    "override": "0.0.1",
+    "save": "^2.4.0",
+    "sequelize": "^6.12.0-beta.1",
+    "sequelize-cli": "^6.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LowOnCYAN23/grupo_5_icebox.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LowOnCYAN23/grupo_5_icebox/issues"
+  },
+  "homepage": "https://github.com/LowOnCYAN23/grupo_5_icebox#readme",
+  "keywords": []
+}
