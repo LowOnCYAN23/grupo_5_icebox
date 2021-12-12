@@ -1,95 +1,46 @@
 const path = require('path');
-const { validationResult } = require('express-validator');
-//const Users = require('../database/models/Users');
-const bcryptjs = require('bcryptjs');
+const db = require('../database/models');
 
 module.exports = {
   login: (req, res) => {
-    return res.render(path.resolve(__dirname, '../views/users/login'));
+    res.render(path.resolve(__dirname, '../views/users/login'));
   },
 
-  processLogin: (req, res) => {
-    let userToLogIn = User.findByField('email', req.body.email);
-
-    if (userToLogIn) {
-      let passwordIsOK = bcryptjs.compareSync(
-        req.body.password,
-        userToLogIn.password
-      );
-      if (passwordIsOK) {
-        delete userToLogIn.password;
-        req.session.userLogged = userToLogIn;
-
-        if (req.body.saveUser) {
-          res.cookie('userEmail', req.body.email, { max: 1000 * 60 * 2 });
-        }
-
-        return res.redirect('/profile');
-      }
-      return res.render(path.resolve(__dirname, '../views/users/login'), {
-        errors: {
-          email: {
-            msg: 'Las credenciales son inválidas',
-          },
-        },
+  list: (req, res) => {
+    // acá estamos llamando a la base de datos de usuarios para que nos muestre a todos los usuarios y lo ponga en la vista de /users
+    // Esa vista no se ha creado, puedes usar la vista de /products para guiarte "copiar y pegar" pero que entregue los datos de usuarios
+    db.Users /*Esto ya esta con el nombre de la base de datos que queremos mostrar es decir la de usuarios*/.findAll()
+      .then((list) => {
+        res.render('../views/products/products', { list: list });
       });
-    }
-    return res.render(path.resolve(__dirname, '../views/users/login'), {
-      errors: {
-        email: {
-          msg: 'El correo electrónico no se encuentra registrado',
-        },
-      },
-    });
+  },
+
+  create: (req, res) => {
+    // Los nombres que van aqui son los que aparecen dentro del input del formulario en la parte de name,
+    //debe decir algo como name='user' y luego pones el nombre de la columna de la tabla más los dos puntos
+    //y lo de req.body."nombre del name dentro del input. Ejemplo:  name_product: req.body.name o puedes
+    //mirar productController + la vista de admon.ejs en la parte de create para guiarte más sobre que nombres colocar"
+
+    res.redirect('/products');
+  },
+
+  edit: (req, res) => {
+    res.render(path.resolve(__dirname, '../views/products/admon'));
+  },
+
+  update: (req, res) => {
+    res.render(path.resolve(__dirname, '../views/products/admon'));
+  },
+
+  delete: (req, res) => {
+    res.render(path.resolve(__dirname, '../views/products/admon'));
+  },
+
+  detail: (req, res) => {
+    res.render(path.resolve(__dirname, '../views/products/admon'));
   },
 
   register: (req, res) => {
-    return res.render(path.resolve(__dirname, '../views/users/register'));
-  },
-
-  processRegister: (req, res) => {
-    const resultValidation = validationResult(req);
-    if (resultValidation.errors.length > 0) {
-      return res.render(path.resolve(__dirname, '../views/users/register'), {
-        errors: resultValidation.mapped(),
-        oldData: req.body,
-      });
-    }
-
-    let userinDB = User.findByField('email', req.body.email);
-    if (userinDB) {
-      return res.render(path.resolve(__dirname, '../views/users/login'), {
-        errors: {
-          email: {
-            msg: 'Este email ya está en uso',
-          },
-        },
-        oldData: req.body,
-      });
-    }
-
-    let userToCreate = {
-      ...req.body,
-      // Aunque en req.body se esta llamando password, el siguiente password
-      // lo sobreescribe
-      password: bcryptjs.hashSync(req.body.password, 10),
-      avatar: req.file.filename,
-    };
-    Users.createUser(userToCreate);
-    return res.redirect(path.resolve(__dirname, '../views/users/login'));
-  },
-
-  userProfile: (req, res) => {
-    console.log(req.cookies.userEmail);
-    return res.render(path.resolve(__dirname, '../views/users/profile'), {
-      user: req.session.userLogged,
-    });
-  },
-
-  logout: (req, res) => {
-    res.clearCookie('userEmail');
-    req.session.destroy();
-    console.log(req.session);
-    return res.redirect('/');
+    res.render(path.resolve(__dirname, '../views/users/register'));
   },
 };
