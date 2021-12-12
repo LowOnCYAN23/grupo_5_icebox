@@ -29,8 +29,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cors());
 app.use(methodOverride('_method'));
-app.use(
-  session({ secret: 'Secret Message', resave: false, saveUninitialized: false })
+app.use(session({ secret: 'Secret Message', resave: false, saveUninitialized: false })
 );
 app.use(cookie());
 //app.use(userLoggedMiddleware);
