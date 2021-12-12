@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  border: 0px;
+}
+
+.crud-title {
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 25px;
+  color: #fff;
+  margin: 0px 0px 20px 0px;
+}
+
+.product-crud-container {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.crud {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  background-color: #000;
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  height: auto;
+  width: 30%;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+input[type='price'],
+input[type='number'],
+input[type='file'],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  resize: vertical;
+  font-family: 'Roboto', sans-serif;
+}
+
+.crud .fas {
+  color: #30fde8;
+  font-size: 15px;
+}
+
+.crud div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  margin: 5px 0px 0px 0px;
+}
