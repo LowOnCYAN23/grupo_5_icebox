@@ -1,3 +1,5 @@
+const Product = require("./Product");
+
 module.exports = (sequelize, DataTypes) => {
   const Product = sequelize.define(
     'Products',
@@ -48,5 +50,35 @@ module.exports = (sequelize, DataTypes) => {
       timestamps: false,
     }
   );
+  Product.associate = function(models) {
+    Product.hasMany(models.Cart,{
+      as: "Cart",
+      foreingKey: "fk_id_product"
+    });
+  };
+  Product.associate = function(models) {
+    Product.belongsTo(models.Category,{
+      as: "Category",
+      foreingKey: "id_category"
+    });
+  };
+  Product.associate = function(models) {
+    Product.belongsTo(models.Color,{
+      as: "Color",
+      foreingKey: "id_color"
+    });
+  };
+  Product.associate = function(models) {
+    Product.belongsTo(models.Genre,{
+      as: "Genre",
+      foreingKey: "id_genre"
+    });
+  };
+  Product.associate = function(models) {
+    Product.belongsTo(models.Trademark,{
+      as: "Trademark",
+      foreingKey: "id_trademark"
+    });
+  };
   return Product;
 };

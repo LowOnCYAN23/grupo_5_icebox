@@ -16,5 +16,11 @@ module.exports = (sequelize, DataTypes) => {
       timestamps: false,
     }
   );
+  Genre.associate = function(models) {
+    Genre.hasMany(models.Product,{
+      as: "Product",
+      foreingKey: "fk_id_genre"
+    });
+  };
   return Genre;
 };

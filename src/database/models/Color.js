@@ -1,8 +1,8 @@
 module.exports = (sequelize, DataTypes) => {
-  const Category = sequelize.define(
-    'Categories',
+  const Color = sequelize.define(
+    'Colors',
     {
-      id_category: {
+      id_color: {
         autoIncrement: true,
         primaryKey: true,
         type: DataTypes.INTEGER,
@@ -16,5 +16,11 @@ module.exports = (sequelize, DataTypes) => {
       timestamps: false,
     }
   );
-  return Category;
+  Color.associate = function(models) {
+    Color.hasMany(models.Product,{
+      as: "Product",
+      foreingKey: "fk_id_color"
+    });
+  };
+  return Color;
 };

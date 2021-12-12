@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const Purchase = sequelize.define(
-    'Purchase_orders',
+    'Purchase_order',
     {
       id_purchase_order: {
         autoIncrement: true,
@@ -25,5 +25,11 @@ module.exports = (sequelize, DataTypes) => {
       timestamps: false,
     }
   );
-  return Purchase;
+  Purchase_order.associate = function(models) {
+    Purchase_order.hasMany(models.Cart,{
+      as: "Cart",
+      foreingKey: "fk_id_order"
+    });
+  };
+  return Purchase_order;
 };

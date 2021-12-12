@@ -1,7 +1,8 @@
 const path = require('path');
 const { validationResult } = require('express-validator');
-//const Users = require('../database/models/Users');
+const Users = require('db.Users');
 const bcryptjs = require('bcryptjs');
+//const db = require('db');
 
 module.exports = {
   login: (req, res) => {
@@ -9,7 +10,7 @@ module.exports = {
   },
 
   processLogin: (req, res) => {
-    let userToLogIn = User.findByField('email', req.body.email);
+    let userToLogIn = Users.findAll('email', req.body.email); //el método findByField no existe en sequelize o de donde se sacó
 
     if (userToLogIn) {
       let passwordIsOK = bcryptjs.compareSync(
@@ -49,14 +50,16 @@ module.exports = {
 
   processRegister: (req, res) => {
     const resultValidation = validationResult(req);
-    if (resultValidation.errors.length > 0) {
+    
+
+    if (resultValidation.errors.length > 0) { //console.log("prueba de error")
       return res.render(path.resolve(__dirname, '../views/users/register'), {
-        errors: resultValidation.mapped(),
-        oldData: req.body,
+        errors: resultValidation.mapped(),//el atributo errors como o donde se asigna
+        oldData: req.body,// donde reside este atributo oldData ¿como registro?
       });
     }
 
-    let userinDB = User.findByField('email', req.body.email);
+    let userinDB = Users.findAll('email', req.body.email);//método findByField parece no pertenecer a sequelize
     if (userinDB) {
       return res.render(path.resolve(__dirname, '../views/users/login'), {
         errors: {
@@ -67,16 +70,20 @@ module.exports = {
         oldData: req.body,
       });
     }
-
-    let userToCreate = {
-      ...req.body,
-      // Aunque en req.body se esta llamando password, el siguiente password
-      // lo sobreescribe
-      password: bcryptjs.hashSync(req.body.password, 10),
-      avatar: req.file.filename,
-    };
-    Users.createUser(userToCreate);
-    return res.redirect(path.resolve(__dirname, '../views/users/login'));
+    else {
+      let userToCreate = {
+        name: req.body.name,
+        email: req.body.email,
+         // Aunque en req.body se esta llamando password, el siguiente password
+         // lo sobreescribe
+         password: bcryptjs.hashSync(req.body.password, 10),
+         image: req.file.filename,
+       };
+       Users.create(userToCreate);//de donde salió la función createUser?? .create pertenece a sequelize?
+       return res.redirect(path.resolve(__dirname, '../views/users/login'));
+    }
+    
+  
   },
 
   userProfile: (req, res) => {

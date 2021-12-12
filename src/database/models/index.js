@@ -1,3 +1,4 @@
+/*
 'use strict';
 
 const fs = require('fs');
@@ -35,3 +36,9 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
 module.exports = db;
+//MODELO DE CONFIGURACIÓN PARA CONECTAR CON SEQUELIZE
+/*const sequelize = new Sequelize('database', 'username', 'password', {
+  host: 'localhost',
+  dialect:  one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' 
+});
+*/
