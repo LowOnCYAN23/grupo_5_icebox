@@ -1,19 +1,16 @@
 const path = require('path');
-const { check } = require('express-validator');
-//se cambió body por check que aparentemente faltaba
-const validations = [
-  check('name').notEmpty().withMessage('Tienes que escribir un nombre'),
+const { body } = require('express-validator');
 
-  check('email')
+const validations = [
+  body('name').notEmpty().withMessage('Tienes que escribir un nombre'),
+  body('email')
     .notEmpty()
     .withMessage('Tienes que escribir un correo electrónico')
     .bail()
     .isEmail()
     .withMessage('Debes escribir un correo electrónico válido'),
-
-  check('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
-
-  check('image').custom((value, { req }) => {
+  body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
+  body('image').custom((value, { req }) => {
     let file = req.file;
     let acceptedExtensions = ['.jpg', '.jpeg', '.png'];
 

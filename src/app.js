@@ -12,9 +12,9 @@ const publicPath = path.resolve(__dirname, '../public');
 
 const homeRoute = require('./routes/homeRoute');
 const loginRoute = require('./routes/loginRoute');
-const logoutRoute = require('./routes/logoutRoute');
+//const logoutRoute = require('./routes/logoutRoute');
 const registerRoute = require('./routes/registerRoute');
-const userProfileRoute = require('./routes/userProfileRoute');
+//const userProfileRoute = require('./routes/userProfileRoute');
 const admonRoute = require('./routes/admonRoute');
 const indexRoute = require('./routes/indexRoute');
 const productRoute = require('./routes/admonRoute');
@@ -29,16 +29,17 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cors());
 app.use(methodOverride('_method'));
-app.use(session({ secret: 'Secret Message', resave: false, saveUninitialized: false })
+app.use(
+  session({ secret: 'Secret Message', resave: false, saveUninitialized: false })
 );
 app.use(cookie());
 //app.use(userLoggedMiddleware);
 
 app.use('/', homeRoute);
 app.use('/login', loginRoute);
-app.use('/logout', logoutRoute);
+//app.use('/logout', logoutRoute);
 app.use('/register', registerRoute);
-app.use('/profile', userProfileRoute);
+//app.use('/profile', userProfileRoute);
 app.use('/admon', admonRoute);
 app.use('/index', indexRoute);
 app.use('/productDetail', productRoute);

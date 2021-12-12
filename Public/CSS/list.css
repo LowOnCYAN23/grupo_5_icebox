@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  border: 0px;
+}
+
+h2 {
+  padding: 10px;
+}
+
+li {
+  list-style: none;
+}
+
+.list-products {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.8rem;
+  color: #fff;
+  background-color: #000;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.34);
+}

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> ICEBOX | CRUD de productos </title>
+    <title> ICEBOX | Registro productos </title>
     <%- include( '../partials/head' )%>
 </head>
 
@@ -16,26 +16,26 @@
                 <img src="../../../public/images/login.jpg" alt='login' class='user-images'>
                 <img src="../../../public/images/login.jpg" alt='login' class='user-images'>
                 <div class='crud'>
-                    <p class='crud-title'> CRUD de productos </p>
+                    <p class='crud-title'> Registro productos </p>
                     <form action="/admon" method='POST'>
 
                         <div class='create-form'>
                             <label for="products" class='products'><i class="fas fa-archive"></i> Nuevo producto
                             </label>
-                            <input type="text" name='name_product' placeholder='Nombre del nuevo producto' required>
+                            <input type="text" name='name' placeholder='Nombre del nuevo producto' required>
                         </div>
 
                         <div class='description-form'>
                             <label for="description" class='description'><i class="fas fa-comment-dots"></i> Descripción
                                 producto</label>
-                            <textarea id='description' name='description-product'
-                                placeholder='Descripción del nuevo producto' rows="4" cols="50" required></textarea>
+                            <textarea id='description' name='description' placeholder='Descripción del nuevo producto'
+                                rows="4" cols="50" required></textarea>
                         </div>
 
                         <div class='product-image'>
                             <label for="productimage" class='productimage'><i class="fas fa-camera"></i>Imagen del
                                 producto </label>
-                            <input type="file" name='productimage' required>
+                            <input type="file" name='image' required>
                         </div>
 
                         <div class='price-form'>
@@ -115,19 +115,14 @@
                     <div class='crud-buttons'>
 
                         <div class='create-button'>
-                            <form action="/products" method="POST">
+                            <form action="/admon" method="POST">
                                 <button type='submit' class='button'> Crear producto </button>
                             </form>
                         </div>
-                        <div class='modify-button'>
-                            <button type='submit' class='button'> Modificar producto </button>
-                        </div>
-                        <div class='delete-button'>
-                            <button type='reset' class='button'> Borrar datos </button>
-                        </div>
-                        </form>
+
+
                         <div class='list-button'>
-                            <form action="/products" method="get">
+                            <form action="/products" method="GET">
                                 <button type='submit' class='button'> Lista de Productos </button>
                             </form>
                         </div>
