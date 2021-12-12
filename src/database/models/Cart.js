@@ -1,40 +1,49 @@
-module.exports = (sequelize, DataTypes) => {
-  const Cart = sequelize.define(
-    'Cart',
-    {
+module.exports = function (sequelize, dataTypes) {
+
+  let alias = "CartTable";
+
+  let cols = {
+
       id_cart: {
-        autoIncrement: true,
-        primaryKey: true,
-        type: DataTypes.INTEGER,
+          type: dataTypes.INTEGER,
+          primaryKey: true,
+          autoIncrement: true,
+          notNull: true
       },
       fk_id_user: {
-        allowNull: false,
-        foreignKey: true,
-        type: DataTypes.INTEGER,
+          type: dataTypes.INTEGER,
+          notNull: true
       },
       fk_id_product: {
-        allowNull: false,
-        foreignKey: true,
-        type: DataTypes.INTEGER,
+          type: dataTypes.INTEGER,
+          notNull: true
+
       },
       fk_id_order: {
-        allowNull: false,
-        foreignKey: true,
-        type: DataTypes.INTEGER,
+          type: dataTypes.INTEGER,
+          notNull: true
       },
-      quantity: {
-        allowNull: false,
-        type: DataTypes.INTEGER,
-      },
-      totalPrice: {
-        allowNull: false,
-        type: DataTypes.DECIMAL,
-      },
-    },
-    {
-      tableName: 'Shopping Cart',
-      timestamps: false,
-    }
-  );
+      cant: {
+          type: dataTypes.INTEGER,
+          notNull: true
+      }
+
+  };
+
+  let config = {
+
+      tableName: "cart",//nombre en la db de mysql
+      timestamps: false
+
+  };
+  
+  let Cart = sequelize.define(alias, cols, config)
+
+  Cart.associate = function (models) {
+      Cart.belongsTo(models.UsersTable),
+      Cart.belongsTo(models.ProductsTable),
+      Cart.belongsTo(models.ProductsTable),
+      Cart.hasMany(models.PorchaseOrdersTable) //falta completar asociaciones
+  }
   return Cart;
 };
