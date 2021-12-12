@@ -24,7 +24,11 @@ module.exports = function (sequelize, dataTypes) {
     let Trademark = sequelize.define(alias, cols, config);
   
     Trademark.associate = function (models) {
-      Trademark.hasMany(models.ProductsTable);//falta completar asociación
+      Trademark.hasMany(models.ProductsTable,{
+        as: "Product",
+        foreingKey: "fk_trademark"
+      });
     };
+
     return Trademark;
   };

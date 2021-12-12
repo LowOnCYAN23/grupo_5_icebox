@@ -26,8 +26,9 @@ module.exports = function (sequelize, dataTypes) {
   Genre.associate = function(models) {
     Genre.belongsTo(models.ProductsTable,{
       as: "Product",
-      foreingKey: "fk_id_genre"
+      foreingKey: "fk_genre"
     });
   };
+
   return Genre;
 };

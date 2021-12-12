@@ -37,13 +37,25 @@ module.exports = function (sequelize, dataTypes) {
 
   };
   
-  let Cart = sequelize.define(alias, cols, config)
+  let Cart = sequelize.define(alias, cols, config);
 
   Cart.associate = function (models) {
-      Cart.belongsTo(models.UsersTable),
-      Cart.belongsTo(models.ProductsTable),
-      Cart.belongsTo(models.ProductsTable),
-      Cart.hasMany(models.PorchaseOrdersTable) //falta completar asociaciones
-  }
+      
+      Cart.belongsTo(models.UsersTable,{
+        as: "User",
+        foreingKey: "fk_id_user"
+      });
+
+      Cart.belongsTo(models.ProductsTable,{
+        as: "Product",
+        foreingKey: "fk_id_product"
+      });
+
+      Cart.hasMany(models.PurchaseOrdersTable,{
+        as: "PurchaseOrder",
+        foreingKey: "fk_id_purchase_order"
+      });
+  };
+
   return Cart;
 };

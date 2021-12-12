@@ -26,8 +26,9 @@ module.exports = function (sequelize, dataTypes) {
   Color.associate = function(models) {
     Color.belongsTo(models.ProductTable,{
       as: "Product",
-      foreingKey: "fk_id_color"
+      foreingKey: "fk_color"
     });
   };
+
   return Color;
 };

@@ -33,16 +33,17 @@ module.exports = function (sequelize, dataTypes) {
   let Purchase_order = sequelize.define(alias, cols, config);
 
   Purchase_order.associate = function(models) {
+
     Purchase_order.hasMany(models.CartsTable,{
       as: "Cart",
       foreingKey: "fk_id_order"
     });
-  };
-  Purchase_order.associate = function(models) {
+  
     Purchase_order.belongsTo(models.UsersTable,{
       as: "User",
       foreingKey: "id_user"
     });
   };
+  
   return Purchase_order;
 };
