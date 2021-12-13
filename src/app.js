@@ -39,6 +39,7 @@ app.use('/', homeRoute);
 app.use('/login', loginRoute);
 //app.use('/logout', logoutRoute);
 app.use('/register', registerRoute);
+
 //app.use('/profile', userProfileRoute);
 app.use('/admon', admonRoute);
 app.use('/index', indexRoute);

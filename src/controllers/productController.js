@@ -13,7 +13,7 @@ module.exports = {
   },
 
   create: (req, res) => {
-    db.Products.create({
+    db.Product.create({
       name_product: req.body.name,
       description_product: req.body.description,
       product_image: req.body.image,
