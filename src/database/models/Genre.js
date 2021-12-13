@@ -1,10 +1,10 @@
 module.exports = function (sequelize, dataTypes) {
 
-  let alias = "TrademarksTable";
+  let alias = "GenresTable";
 
   let cols = {
 
-      id_trademark: {
+      id_genre: {
           type: dataTypes.INTEGER,
           primaryKey: true,
           autoIncrement: true,
@@ -17,18 +17,18 @@ module.exports = function (sequelize, dataTypes) {
   };
 
   let config = {
-      tableName: "trademark",
+      tableName: "genres",
       timestamps: false
   };
 
-  let Trademark = sequelize.define(alias, cols, config);
+  let Genre = sequelize.define(alias, cols, config);
 
-  Trademark.associate = function (models) {
-    Trademark.hasMany(models.ProductsTable,{
+  Genre.associate = function(models) {
+    Genre.belongsTo(models.ProductsTable,{
       as: "Product",
-      foreingKey: "fk_trademark"
+      foreingKey: "fk_genre"
     });
   };
 
-  return Trademark;
+  return Genre;
 };

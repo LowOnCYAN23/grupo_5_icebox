@@ -1,7 +1,7 @@
 module.exports = {
   development: {
     username: 'root',
-    password: 'sashasan23',
+    password: 'Bl@nco',
     database: 'icebox_db',
     host: '127.0.0.1',
     dialect: 'mysql',

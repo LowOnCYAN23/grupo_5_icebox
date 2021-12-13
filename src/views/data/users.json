@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 [{"id":1,"Nombre":"Arlee","Apellido":"McCaskill","Email":"amccaskill0@cbsnews.com","Contraseña":"Y0jqbjb8","Categoría":"user","Imagen":"user_1.jpg"},
 {"id":2,"Nombre":"Denny","Apellido":"Lowman","Email":"dlowman1@w3.org","Contraseña":"CYEspb3oZ7m6","Categoría":"user","Imagen":"user_2.jpg"},
 {"id":3,"Nombre":"Archy","Apellido":"Ainger","Email":"aainger2@independent.co.uk","Contraseña":"zb3P2ZA","Categoría":"user","Imagen":"user_3.jpg"},
@@ -18,25 +17,4 @@
 {"id":17,"Nombre":"Manon","Apellido":"Smoth","Email":"msmothg@blogger.com","Contraseña":"f7Gud92RiW","Categoría":"user","Imagen":"user_17.jpg"},
 {"id":18,"Nombre":"Boyd","Apellido":"Seaborne","Email":"bseaborneh@clickbank.net","Contraseña":"DqDWyLZERW","Categoría":"user","Imagen":"user_18.jpg"},
 {"id":19,"Nombre":"Homere","Apellido":"Peppard","Email":"hpeppardi@hugedomains.com","Contraseña":"PkxjdqL1","Categoría":"user","Imagen":"user_19.jpg"},
-=======
-[{"id":1,"Nombre":"Arlee","Apellido":"McCaskill","Email":"amccaskill0@cbsnews.com","Contraseña":"Y0jqbjb8","Categoría":"user","Imagen":"user_1.jpg"},
-{"id":2,"Nombre":"Denny","Apellido":"Lowman","Email":"dlowman1@w3.org","Contraseña":"CYEspb3oZ7m6","Categoría":"user","Imagen":"user_2.jpg"},
-{"id":3,"Nombre":"Archy","Apellido":"Ainger","Email":"aainger2@independent.co.uk","Contraseña":"zb3P2ZA","Categoría":"user","Imagen":"user_3.jpg"},
-{"id":4,"Nombre":"Claudette","Apellido":"Danigel","Email":"cdanigel3@prlog.org","Contraseña":"qApUmzqZ","Categoría":"user","Imagen":"user_4.jpg"},
-{"id":5,"Nombre":"Gwendolyn","Apellido":"Legendre","Email":"glegendre4@unc.edu","Contraseña":"XLYsCoSK2k","Categoría":"user","Imagen":"user_5.jpg"},
-{"id":6,"Nombre":"Emlyn","Apellido":"Stucke","Email":"estucke5@unc.edu","Contraseña":"i9eOodz50Cxq","Categoría":"user","Imagen":"user_6.jpg"},
-{"id":7,"Nombre":"Beale","Apellido":"Canto","Email":"bcanto6@nydailynews.com","Contraseña":"qJJNJSPBkcRm","Categoría":"user","Imagen":"user_7.jpg"},
-{"id":8,"Nombre":"Errick","Apellido":"Dugall","Email":"edugall7@telegraph.co.uk","Contraseña":"ne4Y2xEDidE","Categoría":"user","Imagen":"user_8.jpg"},
-{"id":9,"Nombre":"Niccolo","Apellido":"Drayton","Email":"ndrayton8@phoca.cz","Contraseña":"UuudGBDs","Categoría":"user","Imagen":"user_9.jpg"},
-{"id":10,"Nombre":"Ford","Apellido":"Rubenov","Email":"frubenov9@loc.gov","Contraseña":"fBUcq2C","Categoría":"user","Imagen":"user_10.jpg"},
-{"id":11,"Nombre":"Vicki","Apellido":"Jekel","Email":"vjekela@elegantthemes.com","Contraseña":"wWM3mEURN6","Categoría":"user","Imagen":"user_11.jpg"},
-{"id":12,"Nombre":"Billy","Apellido":"Brecher","Email":"bbrecherb@reddit.com","Contraseña":"GG4HIHzKKbb","Categoría":"user","Imagen":"user_12.jpg"},
-{"id":13,"Nombre":"Harv","Apellido":"O Mullen","Email":"homullenc@bbb.org","Contraseña":"epc0Bvspwwq","Categoría":"user","Imagen":"user_13.jpg"},
-{"id":14,"Nombre":"Nichols","Apellido":"Sey","Email":"nseyd@java.com","Contraseña":"Q95xGuUhZ","Categoría":"user","Imagen":"user_14.jpg"},
-{"id":15,"Nombre":"Jojo","Apellido":"Tretter","Email":"jtrettere@imageshack.us","Contraseña":"0mcBVpQes2t","Categoría":"user","Imagen":"user_15.jpg"},
-{"id":16,"Nombre":"Odelle","Apellido":"Cartmael","Email":"ocartmaelf@sbwire.com","Contraseña":"qCoLNC","Categoría":"user","Imagen":"user_16.jpg"},
-{"id":17,"Nombre":"Manon","Apellido":"Smoth","Email":"msmothg@blogger.com","Contraseña":"f7Gud92RiW","Categoría":"user","Imagen":"user_17.jpg"},
-{"id":18,"Nombre":"Boyd","Apellido":"Seaborne","Email":"bseaborneh@clickbank.net","Contraseña":"DqDWyLZERW","Categoría":"user","Imagen":"user_18.jpg"},
-{"id":19,"Nombre":"Homere","Apellido":"Peppard","Email":"hpeppardi@hugedomains.com","Contraseña":"PkxjdqL1","Categoría":"user","Imagen":"user_19.jpg"},
->>>>>>> 89a8a777c8de1a2ec7a0b6cf14554ac4b4aad282
 {"id":20,"Nombre":"Benson","Apellido":"Vinnicombe","Email":"bvinnicombej@cisco.com","Contraseña":"mHNkipkLL92","Categoría":"user","Imagen":"user_20.jpg"}]
