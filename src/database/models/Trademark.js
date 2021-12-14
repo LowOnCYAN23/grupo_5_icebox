@@ -1,34 +1,20 @@
-module.exports = function (sequelize, dataTypes) {
-
-  let alias = "TrademarksTable";
-
-  let cols = {
-
+module.exports = (sequelize, DataTypes) => {
+  const Trademark = sequelize.define(
+    'Genres',
+    {
       id_trademark: {
-          type: dataTypes.INTEGER,
-          primaryKey: true,
-          autoIncrement: true,
-          notNull: true
+        autoIncrement: true,
+        primaryKey: true,
+        type: DataTypes.INTEGER,
       },
       name: {
-          type: dataTypes.STRING,
-          notNull: true
-      }
-  };
-
-  let config = {
-      tableName: "trademark",
-      timestamps: false
-  };
-
-  let Trademark = sequelize.define(alias, cols, config);
-
-  Trademark.associate = function (models) {
-    Trademark.hasMany(models.ProductsTable,{
-      as: "Product",
-      foreingKey: "fk_trademark"
-    });
-  };
-
+        allowNull: false,
+        type: DataTypes.STRING,
+      },
+    },
+    {
+      timestamps: false,
+    }
+  );
   return Trademark;
 };

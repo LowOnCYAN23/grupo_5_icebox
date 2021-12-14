@@ -1,34 +1,20 @@
-module.exports = function (sequelize, dataTypes) {
-
-  let alias = "ColorsTable";
-
-  let cols = {
-
+module.exports = (sequelize, DataTypes) => {
+  const Color = sequelize.define(
+    'Colors',
+    {
       id_color: {
-          type: dataTypes.INTEGER,
-          primaryKey: true,
-          autoIncrement: true,
-          notNull: true
+        autoIncrement: true,
+        primaryKey: true,
+        type: DataTypes.INTEGER,
       },
       name: {
-          type: dataTypes.STRING,
-          notNull: true
-      }
-  };
-
-  let config = {
-      tableName: "colors",
-      timestamps: false
-  };
-
-  let Color = sequelize.define(alias, cols, config);
-
-  Color.associate = function(models) {
-    Color.belongsTo(models.ProductTable,{
-      as: "Product",
-      foreingKey: "fk_color"
-    });
-  };
-
+        allowNull: false,
+        type: DataTypes.STRING,
+      },
+    },
+    {
+      timestamps: false,
+    }
+  );
   return Color;
 };

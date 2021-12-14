@@ -12,8 +12,14 @@ module.exports = {
     });
   },
 
+  detail: (req, res) => {
+    db.Products.findByPk(req.params.id_product).then((detail) => {
+      res.render('../views/products/productDetail', { detail: detail });
+    });
+  },
+
   create: (req, res) => {
-    db.Product.create({
+    db.Products.create({
       name_product: req.body.name,
       description_product: req.body.description,
       product_image: req.body.image,
@@ -31,22 +37,33 @@ module.exports = {
   },
 
   update: (req, res) => {
-    res.render(path.resolve(__dirname, '../views/products/admon'));
+    db.Products.update(
+      {
+        name_product: req.body.name,
+        description_product: req.body.description,
+        product_image: req.body.image,
+        price: req.body.price,
+        fk_id_color: req.body.color,
+        fk_id_category: req.body.category,
+        fk_id_trademark: req.body.trademark,
+        fk_id_genre: req.body.genre,
+      },
+      {
+        where: {
+          id: req.params.id_product,
+        },
+      }
+    );
+    res.redirect('/products/' + req.params.id_product);
   },
 
   delete: (req, res) => {
     db.Products.destroy({
       where: {
-        id: req.params.id,
+        id: req.params.id_product,
       },
     });
     res.redirect('/products');
-  },
-
-  detail: (req, res) => {
-    return res.render(
-      path.resolve(__dirname, '../views/products/productDetail')
-    );
   },
 
   cart: (req, res) => {

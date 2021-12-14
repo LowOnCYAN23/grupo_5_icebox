@@ -1,34 +1,20 @@
-module.exports = function (sequelize, dataTypes) {
-
-  let alias = "GenresTable";
-
-  let cols = {
-
+module.exports = (sequelize, DataTypes) => {
+  const Genre = sequelize.define(
+    'Genres',
+    {
       id_genre: {
-          type: dataTypes.INTEGER,
-          primaryKey: true,
-          autoIncrement: true,
-          notNull: true
+        autoIncrement: true,
+        primaryKey: true,
+        type: DataTypes.INTEGER,
       },
       name: {
-          type: dataTypes.STRING,
-          notNull: true
-      }
-  };
-
-  let config = {
-      tableName: "genres",
-      timestamps: false
-  };
-
-  let Genre = sequelize.define(alias, cols, config);
-
-  Genre.associate = function(models) {
-    Genre.belongsTo(models.ProductsTable,{
-      as: "Product",
-      foreingKey: "fk_genre"
-    });
-  };
-
+        allowNull: false,
+        type: DataTypes.STRING,
+      },
+    },
+    {
+      timestamps: false,
+    }
+  );
   return Genre;
 };

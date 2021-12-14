@@ -20,7 +20,9 @@
                     <br>
                     <% for (let i=0 ; i<list.length;i++){ %>
                         <li>
-                            <%= list[i].name_product %>
+                            <a href="/products/<%= list[i].id_product%>">
+                                <%= list[i].name_product %>
+                            </a>
                         </li>
                         <% }%>
                 </div>

@@ -1,49 +1,29 @@
-module.exports = function (sequelize, dataTypes) {
-
-  let alias = "PurchaseOrdersTable";
-
-  let cols = {
-
+module.exports = (sequelize, DataTypes) => {
+  const Purchase = sequelize.define(
+    'Purchase_orders',
+    {
       id_purchase_order: {
-          type: dataTypes.INTEGER,
-          primaryKey: true,
-          autoIncrement: true,
-          notNull: true
+        autoIncrement: true,
+        primaryKey: true,
+        type: DataTypes.INTEGER,
       },
       fk_id_user: {
-          type: dataTypes.INTEGER,
-          foreignKey: true,
-          notNull: true
+        allowNull: false,
+        foreignKey: true,
+        type: DataTypes.INTEGER,
       },
       shipping: {
-          type: dataTypes.INTEGER,
-          notNull: true
+        allowNull: false,
+        type: DataTypes.INTEGER,
       },
-      paymetn_method: {
-          type: dataTypes.STRING,
-          notNull: true
-      }
-  };
-
-  let config = {
-      tableName: "purchase_orders",
-      timestamps: false
-  };
-
-  let Purchase_order = sequelize.define(alias, cols, config);
-
-  Purchase_order.associate = function(models) {
-
-    Purchase_order.hasMany(models.CartsTable,{
-      as: "Cart",
-      foreingKey: "fk_id_order"
-    });
-  
-    Purchase_order.belongsTo(models.UsersTable,{
-      as: "User",
-      foreingKey: "id_user"
-    });
-  };
-  
-  return Purchase_order;
+      payment_method: {
+        allowNull: false,
+        type: DataTypes.STRING,
+      },
+    },
+    {
+      timestamps: false,
+    }
+  );
+  return Purchase;
 };

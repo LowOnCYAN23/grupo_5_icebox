@@ -1,92 +1,44 @@
-module.exports = function (sequelize,dataTypes) {
-  //VARIABLE DE NOMBRE DE TABLA PARA SEQUELIZE
-  let alias = "ProductsTable";
-  //VARIABLE DE ATRIBUTOS CON SUS PROPIEDADES PARA CADA COLUMNA A USAR EN EL PROYECTO
-  let cols = {
-
+module.exports = (sequelize, DataTypes) => {
+  const Product = sequelize.define(
+    'Products',
+    {
       id_product: {
-          type:dataTypes.INTEGER,
-          primaryKey: true,
-          notNull: true,
-          uniqueIndex: true,
-          autoIncrement: true
+        autoIncrement: true,
+        primaryKey: true,
+        type: DataTypes.INTEGER,
       },
-
       name_product: {
-          type:dataTypes.STRING,
-          notNull: true,
+        type: DataTypes.STRING,
       },
-
       description_product: {
-          type:dataTypes.STRING,
-          notNull: true,
+        type: DataTypes.STRING,
       },
-
       product_image: {
-          type:dataTypes.STRING,
-          notNull: true,
+        type: DataTypes.STRING,
       },
-
       price: {
-          type:dataTypes.DECIMAL,
-          notNull: true,
+        type: DataTypes.DECIMAL,
       },
-
-      fk_color: {
-          type:dataTypes.INTEGER
+      fk_id_color: {
+        foreignKey: true,
+        type: DataTypes.INTEGER,
       },
-
-      fk_category: {
-          type:dataTypes.INTEGER
+      fk_id_category: {
+        foreignKey: true,
+        type: DataTypes.INTEGER,
       },
-
-      fk_mark: {
-          type:dataTypes.INTEGER
+      fk_id_trademark: {
+        foreignKey: true,
+        type: DataTypes.INTEGER,
       },
-
-      fk_genre: {
-          type:dataTypes.INTEGER
-      }
-  };
-  //VARIABLE DE CONFIGURACIÓN (timestamps sirve para registro de fecha de creación y otra fecha de editado)
-  let config = {
-
-      tableName: "products",//nombre en la db de mysql
-      timestamps: false
-
-  };
-  
-  let Product = sequelize.define(alias, cols, config);
-
-  Product.associate = function(models) {
-    Product.hasMany(models.CartTable,{
-      as: "Cart",
-      foreingKey: "fk_id_product"
-    });
-  };
-  Product.associate = function(models) {
-    Product.belongsTo(models.CategoriesTable,{
-      as: "Category",
-      foreingKey: "id_category"
-    });
-  };
-  Product.associate = function(models) {
-    Product.belongsTo(models.ColorsTable,{
-      as: "Color",
-      foreingKey: "id_color"
-    });
-  };
-  Product.associate = function(models) {
-    Product.belongsTo(models.GenresTable,{
-      as: "Genre",
-      foreingKey: "id_genre"
-    });
-  };
-  Product.associate = function(models) {
-    Product.belongsTo(models.TrademarksTable,{
-      as: "Trademark",
-      foreingKey: "id_trademark"
-    });
-  };
+      fk_id_genre: {
+        foreignKey: true,
+        type: DataTypes.INTEGER,
+      },
+    },
+    {
+      timestamps: false,
+    }
+  );
   return Product;
 };

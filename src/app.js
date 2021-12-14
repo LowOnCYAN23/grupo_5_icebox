@@ -17,7 +17,7 @@ const registerRoute = require('./routes/registerRoute');
 //const userProfileRoute = require('./routes/userProfileRoute');
 const admonRoute = require('./routes/admonRoute');
 const indexRoute = require('./routes/indexRoute');
-const productRoute = require('./routes/admonRoute');
+const productRoute = require('./routes/productRoute');
 const cartRoute = require('./routes/cartRoute');
 const listRoute = require('./routes/listRoute');
 
@@ -43,7 +43,7 @@ app.use('/register', registerRoute);
 //app.use('/profile', userProfileRoute);
 app.use('/admon', admonRoute);
 app.use('/index', indexRoute);
-app.use('/productDetail', productRoute);
+app.use('/:id_product', productRoute);
 app.use('/productCart', cartRoute);
 app.use('/products', listRoute);
 

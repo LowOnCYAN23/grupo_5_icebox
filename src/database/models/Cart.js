@@ -1,61 +1,40 @@
-module.exports = function (sequelize, dataTypes) {
-
-  let alias = "CartTable";
-
-  let cols = {
-
+module.exports = (sequelize, DataTypes) => {
+  const Cart = sequelize.define(
+    'Cart',
+    {
       id_cart: {
-          type: dataTypes.INTEGER,
-          primaryKey: true,
-          autoIncrement: true,
-          notNull: true
+        autoIncrement: true,
+        primaryKey: true,
+        type: DataTypes.INTEGER,
       },
       fk_id_user: {
-          type: dataTypes.INTEGER,
-          notNull: true
+        allowNull: false,
+        foreignKey: true,
+        type: DataTypes.INTEGER,
       },
       fk_id_product: {
-          type: dataTypes.INTEGER,
-          notNull: true
-
+        allowNull: false,
+        foreignKey: true,
+        type: DataTypes.INTEGER,
       },
       fk_id_order: {
-          type: dataTypes.INTEGER,
-          notNull: true
+        allowNull: false,
+        foreignKey: true,
+        type: DataTypes.INTEGER,
       },
-      cant: {
-          type: dataTypes.INTEGER,
-          notNull: true
-      }
-
-  };
-
-  let config = {
-
-      tableName: "cart",//nombre en la db de mysql
-      timestamps: false
-
-  };
-  
-  let Cart = sequelize.define(alias, cols, config);
-
-  Cart.associate = function (models) {
-      
-      Cart.belongsTo(models.UsersTable,{
-        as: "User",
-        foreingKey: "fk_id_user"
-      });
-
-      Cart.belongsTo(models.ProductsTable,{
-        as: "Product",
-        foreingKey: "fk_id_product"
-      });
-
-      Cart.hasMany(models.PurchaseOrdersTable,{
-        as: "PurchaseOrder",
-        foreingKey: "fk_id_purchase_order"
-      });
-  };
-
+      quantity: {
+        allowNull: false,
+        type: DataTypes.INTEGER,
+      },
+      totalPrice: {
+        allowNull: false,
+        type: DataTypes.DECIMAL,
+      },
+    },
+    {
+      tableName: 'Shopping Cart',
+      timestamps: false,
+    }
+  );
   return Cart;
 };
