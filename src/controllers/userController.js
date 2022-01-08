@@ -1,5 +1,6 @@
 const path = require('path');
 const db = require('../database/models');
+const multerMiddleware = require('../middlewares/multerMiddleware')
 
 module.exports = {
   login: (req, res) => {
@@ -20,7 +21,7 @@ module.exports = {
       image: req.body.image,
     });
     return res.render(
-      path.resolve(__dirname, multerMiddleware, '../views/users/profile')
+      path.resolve(__dirname,/* multerMiddleware,*/ '../views/users/profile')
     );
   },
 

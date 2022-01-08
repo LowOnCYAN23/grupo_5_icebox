@@ -46,7 +46,10 @@ app.use('/index', indexRoute);
 app.use('/:id_product', productRoute);
 app.use('/productCart', cartRoute);
 app.use('/products', listRoute);
-
+app.use(function(req, res, next) {
+  res.locals.user = req.session.user;
+  next();
+});
 app.listen(process.env.PORT || 5000, () => {
   console.log('Servidor ACTIVADO');
 });
