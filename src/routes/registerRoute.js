@@ -13,7 +13,7 @@ const uploadFile = require('../middlewares/multerMiddleware');
     validations,
     userController.create
   );*/
-router.get('/', userController.register);
+router.get('/register', userController.register);
 router.post('/', userController.create);
 router.put('/', userController.update);
 router.delete('/delete/:id', userController.delete);
