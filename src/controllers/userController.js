@@ -1,63 +1,32 @@
 const path = require('path');
 const db = require('../database/models/index');
-const User = db.User
-const multerMiddleware = require('../middlewares/multerMiddleware')
+const User = db.User   //para que sea utilizada esta variable debe ser Users?? pero si es Users no la toma
 
-//INTENTO DE USAR ASYNC AWAY
-const userController = {
-  register: async (req, res) => {
-    try {
-      (req, res) => {
-        res.render(path.resolve(__dirname, '../views/users/register'));
-      }
-    } catch (error) {
-        return res.send(error)
-    }
-  },
-  create: async (req, res) => {
-    try {
-      User.create({
-        name: req.body.name,
-        email: req.body.email,
-        password: req.body.password,
-        image: req.body.image,
-      });
-      return res.render(
-        path.resolve(__dirname,/* multerMiddleware,*/'../views/users/profile')
-      );
-    } catch (error) {
-        return res.send(error)
-    }
-  }
-}
-
-module.exports = userController;
-/*
 module.exports = {
   login: (req, res) => {
     res.render(path.resolve(__dirname, '../views/users/login'));
   },
 
   list: (req, res) => {
-    User.then((user) => {
+    db.Users.then((users) => {
       res.render('../views/profile', { users: users });
     });
   },
 
   create: (req, res) => {
-    User.create({
+    db.Users.create({
       name: req.body.name,
       email: req.body.email,
       password: req.body.password,
       image: req.body.image,
-    });
-    return res.render(
-      path.resolve(__dirname,/* multerMiddleware,*/ /*'../views/users/profile')
-    );
+    }).then( ()=> {return res.render(
+      path.resolve(__dirname, multerMiddleware, '../views/users/profile')
+    )} ).catch(error=>res.send(error));
+    
   },
 
   update: (req, res) => {
-    User.update(
+    db.User.update(
       {
         name: req.body.name,
         email: req.body.email,
@@ -74,7 +43,7 @@ module.exports = {
   },
 
   delete: (req, res) => {
-    User.destroy({
+    db.Users.destroy({
       where: {
         id: req.params.id,
       },
@@ -86,4 +55,3 @@ module.exports = {
     res.render(path.resolve(__dirname, '../views/users/register'));
   },
 };
-*/

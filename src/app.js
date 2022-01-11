@@ -28,8 +28,8 @@ app.set('views', path.resolve(__dirname, 'views'));
 app.listen(app.get('port'),() => console.log('servidor ACTIVADO en port http://localhost:' + app.get('port')));
 
 
-app.use('/public', express.static(publicPath));
 
+app.use('/public', express.static(publicPath));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cors());
@@ -37,13 +37,13 @@ app.use(methodOverride('_method'));
 app.use(
   session({ secret: 'Secret Message', resave: false, saveUninitialized: false })
 );
-
+app.use(cookie());
 //app.use(session({secret: 'secret', saveUninitialized: false, resave: false}));
 //app.use((req,res,next) => {
 //  res.locals.user = req.session && req.session.user ? req.session.user : null;
 //  next();
 //})
-app.use(cookie());
+
 //app.use(userLoggedMiddleware);
 
 app.use('/', homeRoute);
@@ -58,7 +58,3 @@ app.use('/:id_product', productRoute);
 app.use('/productCart', cartRoute);
 app.use('/products', listRoute);
 
-
-//app.listen(process.env.PORT || 5000, () => {
-//console.log('Servidor ACTIVADO');
-//});
