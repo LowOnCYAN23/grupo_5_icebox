@@ -13,46 +13,56 @@
     <%- include( '../partials/header' )%>
         <main>
             <div class='login-container'>
-                <img src="../../../public/images/login.jpg" alt='login' class='user-images'>
+                <img src="../../../public/images/background.jpg" alt='login' class='user-images'>
                 <div class='login'>
                     <p class='register-title'>Inicio Sesión</p>
-                    <form action="" method='POST'>
+                    <form action="/index" method='POST'>
                         <div class='email-form'>
                             <label for="email" class='email'><i class="fas fa-envelope"></i> Correo Electrónico </label>
-                            <input type="text" name='email' placeholder='micorreo@direccion.com'
-                                value="<%= locals.oldData ? oldData.email : null %>">
+                            <input type="text" name='email' placeholder='micorreo@direccion.com' required>
+
+                            <% if (typeOf errores !='undefined' ){ %>
+                                <% for (let i=0 ; i < errores.length;i++){ %>
+                                    <% if(errores[i].param=="email" ){ %>
+                                        <div class='text-danger'>
+                                            <%= errors.email.msg %>
+                                        </div>
+                                        <% } %>
+                                            <% } %>
+                                                <% } %>
                         </div>
-                        <% if (locals.errors && errors.email){ %>
-                            <div class='text-danger'>
-                                <%= errors.email.msg %>
-                            </div>
-                            <% } %>
-                                <div class='password-form'>
-                                    <label for="password" class='password'> <i class="fas fa-key"></i>Contraseña
-                                    </label>
-                                    <input type="password" name='password' placeholder='********'>
-                                </div>
-                                <% if (locals.errors && errors.password){ %>
-                                    <div class='text-danger'>
-                                        <%= errors.password.msg %>
-                                    </div>
-                                    <% } %>
-                                        <div class='save'>
-                                            <label for="save" class='save'>
-                                                <input type="checkbox" name='saveUser'>
-                                                Recordar usuario
-                                            </label>
+                        <div class='password-form'>
+                            <label for="password" class='password'> <i class="fas fa-key"></i>Contraseña
+                            </label>
+                            <input type="password" name='password' placeholder='********' required>
+                            <% if (typeOf errores !='undefined' ){ %>
+                                <% for (let i=0 ; i < errores.length;i++){ %>
+                                    <% if(errores[i].param=="email" ){ %>
+                                        <div class='text-danger'>
+                                            <%= errors.email.msg %>
                                         </div>
-                                        <div class='login-button'>
-                                            <button type='submit' class='button'> Iniciar Sesión </button>
-                                        </div>
+                                        <% } %>
+                                            <% } %>
+                                                <% } %>
+                        </div>
+                        <div class='save'>
+                            <label for="save" class='save'>
+                                <input type="checkbox" name='saveUser'>
+                                Recordar usuario
+                            </label>
+                        </div>
+                        <div class='login-button'>
+                            <button type='submit' class='button' id='btnLogin'> Iniciar Sesión
+                            </button>
+                        </div>
                     </form>
 
                     <div class='register-button'>
                         <form action="/register" method="GET">
-                            <button type='submit' class='button'> Registrarse </button>
+                            <button type='submit' class='button' id='btnRegister'> Registrarse </button>
                         </form>
                     </div>
+
 
                 </div>
             </div>

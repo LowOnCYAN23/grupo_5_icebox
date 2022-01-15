@@ -7,7 +7,7 @@ module.exports = {
   },
 
   list: (req, res) => {
-    db.Products.findAll().then((list) => {
+    db.Users.findAll().then((list) => {
       res.render('../views/products/products', { list: list });
     });
   },

@@ -7,7 +7,10 @@ const loginValidations = [
     .bail()
     .isEmail()
     .withMessage('Debes escribir un correo electrónico válido'),
-  body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
+  body('password')
+    .isLength({ min: 8 })
+    .notEmpty()
+    .withMessage('Tienes que escribir una contraseña con mínimo 8 caracteres'),
 ];
 
 module.exports = loginValidations;

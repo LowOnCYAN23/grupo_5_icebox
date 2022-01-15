@@ -1,8 +1,8 @@
 const path = require('path');
 const { body } = require('express-validator');
 
-const validations = [
-  body('name').notEmpty().withMessage('Tienes que escribir un nombre'),
+const registerValidations = [
+  body('name').notEmpty().withMessage('Tiene que escribir un nombre completo'),
   body('email')
     .notEmpty()
     .withMessage('Tienes que escribir un correo electrónico')
@@ -12,7 +12,7 @@ const validations = [
   body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
   body('image').custom((value, { req }) => {
     let file = req.file;
-    let acceptedExtensions = ['.jpg', '.jpeg', '.png'];
+    let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
 
     if (!file) {
       throw new Error('Tienes que subir una imagen');
@@ -30,4 +30,4 @@ const validations = [
   }),
 ];
 
-module.exports = validations;
+module.exports = registerValidations;

@@ -13,10 +13,10 @@
     <%- include( '../partials/header' )%>
         <main>
             <div class='register-container'>
-                <img src="../../../public/images/login.jpg" alt='login' class='user-images'>
+                <img src="../../../public/images/background.jpg" alt='login' class='user-images'>
                 <div class='register'>
                     <p class='register-title'> Registrate </p>
-                    <form action="/register" method='POST' enctype="multipart/form-data">
+                    <form action="" method='POST' enctype='multipart/form-data'>
                         <div class='new-name-form'>
                             <label for="name" class='name'><i class="fas fa-user-circle"></i> Nombre completo </label>
                             <input type="text" name='name' value="<%= locals.oldData ? oldData.name : null %>"
@@ -56,7 +56,7 @@
                                                     <label for="image" class='image'><i class="fas fa-camera"></i>
                                                         Imagen de
                                                         perfil </label>
-                                                    <input type="file" name='image'>
+                                                    <input type="file" name='image' required>
                                                 </div>
                                                 <% if (locals.errors && errors.image){ %>
                                                     <div class='text-danger'>
