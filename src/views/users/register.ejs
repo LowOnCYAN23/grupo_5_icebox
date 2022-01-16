@@ -19,11 +19,15 @@
                     <form action="" method='POST' enctype='multipart/form-data'>
                         <div class='new-name-form'>
                             <label for="name" class='name'><i class="fas fa-user-circle"></i> Nombre completo </label>
+                            <!--En el Value: SÍ vino algo en el input, dejarlo, si no dejarlo vacio (null)-->
                             <input type="text" name='name' value="<%= locals.oldData ? oldData.name : null %>"
                                 placeholder='Nombre completo'>
                         </div>
+                        <!--SI en las variables locales vino "errors" Y si en esa variable errores vino un error para el
+                        campo name-->
                         <% if (locals.errors && errors.name){ %>
                             <div class='text-danger'>
+                                <!--De errors que es la variable que llega, yo quiero la propiedad de name el mensaje-->
                                 <%= errors.name.msg %>
                             </div>
                             <% } %>
@@ -56,7 +60,7 @@
                                                     <label for="image" class='image'><i class="fas fa-camera"></i>
                                                         Imagen de
                                                         perfil </label>
-                                                    <input type="file" name='image' required>
+                                                    <input type="file" name='image'>
                                                 </div>
                                                 <% if (locals.errors && errors.image){ %>
                                                     <div class='text-danger'>
