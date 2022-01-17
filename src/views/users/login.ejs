@@ -45,9 +45,9 @@
                             title="Debe tener al menos una mayúscula, una minúscula, un número y un caracater especial">
                             <% if (typeOf errores !='undefined' ){ %>
                                 <% for (let i=0 ; i < errores.length;i++){ %>
-                                    <% if(errores[i].param=="email" ){ %>
+                                    <% if(errores[i].param=="password" ){ %>
                                         <div class='text-danger'>
-                                            <%= errors.email.msg %>
+                                            <%= errors.password.msg %>
                                         </div>
                                         <% } %>
                                             <% } %>

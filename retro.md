@@ -52,3 +52,19 @@ RETROSPECTIVA  Sprint 5 :
 3)Repartir las tareas por más que no sepan realizarlas los integrantes del grupo.
 4)Posponer las tareas para lo último.
 5)No acercarnos a pedir más ayuda entre los integrantes.
+
+RETROSPECTIVA  Sprint 6 :
+Tarea asignada no completada por razones particulares del integrante de grupo 5.
+
+
+RETROSPECTIVA  Sprint 7 :
+1. Comenzar a hacer.
+2. Hacer más.
+3. Continuar haciendo.
+4. Hacer menos.
+5. Dejar de hacer.
+1)Entendimos que había fallas en las validaciones de backend y frontend para subsanar estas incidencias repasamos material del playground. Una incidencia refiere a como hacer para comparar la clave que pone un usuario con la clave que encripte, porque dice que no puede comparar un string con un objeto, en si funciona todo porque una vez pones todos tus datos te devuelve un json que indica que el usuario efectivamente esta loggeado. El amplio espectro de soluciones requiere asistencia docente de la cual escasea por tiempo y por decisiones institucionales.
+2)Continuar recurriendo a soluciones en la web y material de playground, y registrar los pasos para mantener una trazabilidad del trabajo sobre un archivo .md en el repositorio remoto. 
+3)Reorganizarnos para suplir las tareas que no se cumplan por razones personales de otros integrantes, mantener la comunicación en forma activa con los compañeros para emparentar los trabajos. .
+4)Enfocarse en intentos ciegos de muchos días y horas (base de datos, validaciones, etc) como problemasy recurrir a ayuda externa si existe la posibilidad.
+5)Esperar respuestas del equipo docente y buscar info en la web y conocidos del ambiente.
