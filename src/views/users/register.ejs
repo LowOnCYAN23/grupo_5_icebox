@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ICEBOX | Registro </title>
+    <style>
+        input:invalid {
+          border: 10px double red;
+          background-color: rgb(248, 177, 208);
+        }
+    </style><!--estilo para validador frontend-->
     <%- include( '../partials/head' )%>
 </head>
 
@@ -22,7 +28,7 @@
                             <label for="name" class='name'><i class="fas fa-user-circle"></i> Nombre completo </label>
                             <!--En el Value: SÍ vino algo en el input, dejarlo, si no dejarlo vacio (null)-->
                             <input type="text" name='name' value="<%= locals.oldData ? oldData.name : null %>"
-                                placeholder='Nombre completo'>
+                                placeholder='Escribe tu nombre completo aquí' required maxlength="50">
                         </div>
                         <!--SI en las variables locales vino "errors" Y si en esa variable errores vino un error para el
                         campo name-->
@@ -35,9 +41,9 @@
                                 <div class='new-email-form'>
                                     <label for="email" class='email'><i class="fas fa-envelope"></i> Correo electrónico
                                     </label>
-                                    <input type="email" name='email'
+                                    <input type="email" id="email" name='email'
                                         value="<%= locals.oldData ? oldData.email : null %>"
-                                        placeholder='micorreo@direccion.com'>
+                                        placeholder='Escribe tu correo electrónico de formato similar a micorreo@dominio.com'>
                                 </div>
                                 <% if (locals.errors && errors.email){ %>
                                     <div class='text-danger'>
@@ -49,7 +55,8 @@
                                             <label for="password" class='password'><i class="fas fa-key"></i>Nueva
                                                 contraseña
                                             </label>
-                                            <input type="password" name='password' placeholder='*********'>
+                                            <input type="password" name='password' required placeholder='escribe aquí tu contraseña mínimo 8 caracteres sin espacios' pattern="[A-Za-z0-9]{8,50}"
+                                            title="Debe tener al menos una mayúscula, una minúscula, un número y un caracater especial">
                                         </div>
                                         <% if (locals.errors && errors.password){ %>
                                             <div class='text-danger'>
@@ -61,7 +68,7 @@
                                                     <label for="image" class='image'><i class="fas fa-camera"></i>
                                                         Imagen de
                                                         perfil </label>
-                                                    <input type="file" name='image'>
+                                                    <input type="file" name='image' required>
                                                 </div>
                                                 <% if (locals.errors && errors.image){ %>
                                                     <div class='text-danger'>
@@ -86,9 +93,138 @@
                                                             <button type='reset' class='button'> Borrar datos </button>
                                                         </div>
                     </form>
+                    <script type="text/javascript" src="../../../Public/js/userValidations.js"></script>
+                    <!-- script validador frontend-->
                 </div>
             </div>
             <%- include ('../partials/footer') %>
 </body>
 
 </html>
+
+pattern="(?=.*\d)(?=.*[a-záéíóúüñ]).*[A-ZÁÉÍÓÚÜÑ].*[°|¬!"#$%&/()=?'\¡¿¨*+~[{}]^`_-/]."
+         title="Debe tener al menos una mayúscula, una minúscula y un dígito"
+
+Ç
+ü
+é
+â
+ä
+à
+å
+ç
+ê
+ë
+è
+ï
+î
+ì
+Ä
+Å
+É
+æ
+Æ
+ô
+ö
+ò
+û
+ù
+ÿ
+Ö
+Ü
+ø
+£
+Ø
+×
+ƒ
+á
+í
+ó
+ú
+ñ
+Ñ
+ª
+º
+¿
+®
+¬
+½
+¼
+¡
+«
+»
+░
+▒
+▓
+│
+┤
+Á
+Â
+À
+©
+╣
+║
+╗
+╝
+¢
+¥
+┐
+└
+┴
+┬
+├
+─
+┼
+ã
+Ã
+╚
+╔
+╩
+╦
+╠
+═
+╬
+¤
+ð
+Ð
+Ê
+Ë
+È
+ı
+Í
+Î
+Ï
+┘
+┌
+█
+▄
+¦
+Ì
+▀
+Ó
+ß
+Ô
+Ò
+õ
+Õ
+µ
+þ
+Þ
+Ú
+Û
+Ù
+ý
+Ý
+¯
+´
+­
+±
+‗
+¾
+¶
+§
+÷
+¸
+°
+¨
+·
