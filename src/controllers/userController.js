@@ -11,11 +11,31 @@ module.exports = {
   },
 
   login: (req, res) => {
-    res.render(path.resolve(__dirname, '../views/users/login'));
+    return res.render(path.resolve(__dirname, '../views/users/login'));
+  },
+
+  loginProcess: (req, res) => {
+    db.Users.findOne({
+      where: {
+        email: req.body.email,
+      },
+    }).then((response) => {
+      if (response) {
+        return res.send(response);
+      }
+
+      return res.render(path.resolve(__dirname, '../views/users/login'), {
+        errors: {
+          email: {
+            msg: 'Este correo electrónico no esta registrado',
+          },
+        },
+      });
+    });
   },
 
   register: (req, res) => {
-    res.render(path.resolve(__dirname, '../views/users/register'));
+    return res.render(path.resolve(__dirname, '../views/users/register'));
   },
 
   create: (req, res) => {
@@ -30,37 +50,34 @@ module.exports = {
       });
     }
 
-    db.Users.findAll({
+    db.Users.findOne({
       where: {
         email: req.body.email,
       },
-    }).then((userInDB) => {
-      //muestra lo de la base de datos pero saca el error
-      //Cannot set headers after they are sent to the client
-      res.send(userInDB);
-    });
-
-    /* if (userInDB) {
-      return res.render(path.resolve(__dirname, '../views/users/register'), {
-        errors: {
-          email: {
-            msg: 'Este correo electrónico ya esta registrado',
+    }).then((response) => {
+      if (response) {
+        res.render(path.resolve(__dirname, '../views/users/register'), {
+          errors: {
+            email: {
+              msg: 'Este correo electrónico ya esta registrado',
+            },
           },
-        },
-        oldData: req.body,
-      });
-    }*/
 
-    db.Users.create({
-      name: req.body.name,
-      email: req.body.email,
-      password: bcryptjs.hashSync(req.body.password, 10),
-      image: req.file.filename,
-    })
-      .then((user) => {
-        res.render('../views/users/profile', { user: user });
-      })
-      .catch((error) => res.send(error));
+          oldData: req.body,
+        });
+      } else {
+        db.Users.create({
+          name: req.body.name,
+          email: req.body.email,
+          password: bcryptjs.hashSync(req.body.password, 10),
+          image: req.file.filename,
+        })
+          .then(() => {
+            return res.redirect('/login');
+          })
+          .catch((error) => res.send(error));
+      }
+    });
   },
 
   update: (req, res) => {

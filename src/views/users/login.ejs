@@ -16,34 +16,25 @@
                 <img src="../../../public/images/background.jpg" alt='login' class='user-images'>
                 <div class='login'>
                     <p class='register-title'>Inicio Sesión</p>
-                    <form action="/index" method='POST'>
+                    <form action="/login" method='POST'>
                         <div class='email-form'>
                             <label for="email" class='email'><i class="fas fa-envelope"></i> Correo Electrónico </label>
                             <input type="text" name='email' placeholder='micorreo@direccion.com' required>
-
-                            <% if (typeOf errores !='undefined' ){ %>
-                                <% for (let i=0 ; i < errores.length;i++){ %>
-                                    <% if(errores[i].param=="email" ){ %>
-                                        <div class='text-danger'>
-                                            <%= errors.email.msg %>
-                                        </div>
-                                        <% } %>
-                                            <% } %>
-                                                <% } %>
+                            <% if (locals.errors && errors.email){ %>
+                                <div class='text-danger'>
+                                    <%= errors.email.msg %>
+                                </div>
+                                <% } %>
                         </div>
                         <div class='password-form'>
                             <label for="password" class='password'> <i class="fas fa-key"></i>Contraseña
                             </label>
                             <input type="password" name='password' placeholder='********' required>
-                            <% if (typeOf errores !='undefined' ){ %>
-                                <% for (let i=0 ; i < errores.length;i++){ %>
-                                    <% if(errores[i].param=="email" ){ %>
-                                        <div class='text-danger'>
-                                            <%= errors.email.msg %>
-                                        </div>
-                                        <% } %>
-                                            <% } %>
-                                                <% } %>
+                            <% if (locals.errors && errors.password){ %>
+                                <div class='text-danger'>
+                                    <%= errors.password.msg %>
+                                </div>
+                                <% } %>
                         </div>
                         <div class='save'>
                             <label for="save" class='save'>
