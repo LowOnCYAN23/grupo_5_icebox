@@ -41,7 +41,8 @@
                         <div class='password-form'>
                             <label for="password" class='password'> <i class="fas fa-key"></i>Contraseña
                             </label>
-                            <input type="password" name='password'required minlength="8" placeholder='escribe aquí tu contraseña mínimo 8 caracteres sin espacios' required>
+                            <input type="password" name='password'required placeholder='escribe aquí tu contraseña mínimo 8 caracteres sin espacios'  pattern="[A-Za-z0-9]{8,50}"
+                            title="Debe tener al menos una mayúscula, una minúscula, un número y un caracater especial">
                             <% if (typeOf errores !='undefined' ){ %>
                                 <% for (let i=0 ; i < errores.length;i++){ %>
                                     <% if(errores[i].param=="email" ){ %>
