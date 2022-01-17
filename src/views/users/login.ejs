@@ -8,10 +8,11 @@
     <title>ICEBOX | Login</title>
     <style>
         input:invalid {
-          border: 10px double red;
-          background-color: rgb(248, 177, 208);
+            border: 10px double red;
+            background-color: rgb(248, 177, 208);
         }
-    </style><!--estilo para validador frontend-->
+    </style>
+    <!--estilo para validador frontend-->
 
     <%- include( '../partials/head' )%>
 </head>
@@ -26,16 +27,20 @@
                     <form action="/login" method='POST'>
                         <div class='email-form'>
                             <label for="email" class='email'><i class="fas fa-envelope"></i> Correo Electrónico </label>
-<<<<<<< HEAD
                             <input type="text" name='email' placeholder='micorreo@direccion.com' required>
                             <% if (locals.errors && errors.email){ %>
                                 <div class='text-danger'>
                                     <%= errors.email.msg %>
                                 </div>
                                 <% } %>
-=======
-                            <input type="text" id="email" name='email' placeholder='Escribe tu correo electrónico de formato similar a micorreo@dominio.com' required>
-
+                        </div>
+                        <div class='password-form'>
+                            <label for="password" class='password'> <i class="fas fa-key"></i>Contraseña
+                            </label>
+                            <input type="password" name='password' required
+                                placeholder='escribe aquí tu contraseña mínimo 8 caracteres sin espacios'
+                                pattern="[A-Za-z0-9]{8,50}"
+                                title="Debe tener al menos una mayúscula, una minúscula, un número y un caracater especial">
                             <% if (typeOf errores !='undefined' ){ %>
                                 <% for (let i=0 ; i < errores.length;i++){ %>
                                     <% if(errores[i].param=="email" ){ %>
@@ -45,31 +50,6 @@
                                         <% } %>
                                             <% } %>
                                                 <% } %>
->>>>>>> 5edc672aa783091d8e1ead0d6b001e4ffd6bdfe2
-                        </div>
-                        <div class='password-form'>
-                            <label for="password" class='password'> <i class="fas fa-key"></i>Contraseña
-                            </label>
-<<<<<<< HEAD
-                            <input type="password" name='password' placeholder='********' required>
-                            <% if (locals.errors && errors.password){ %>
-                                <div class='text-danger'>
-                                    <%= errors.password.msg %>
-                                </div>
-                                <% } %>
-=======
-                            <input type="password" name='password'required placeholder='escribe aquí tu contraseña mínimo 8 caracteres sin espacios'  pattern="[A-Za-z0-9]{8,50}"
-                            title="Debe tener al menos una mayúscula, una minúscula, un número y un caracater especial">
-                            <% if (typeOf errores !='undefined' ){ %>
-                                <% for (let i=0 ; i < errores.length;i++){ %>
-                                    <% if(errores[i].param=="password" ){ %>
-                                        <div class='text-danger'>
-                                            <%= errors.password.msg %>
-                                        </div>
-                                        <% } %>
-                                            <% } %>
-                                                <% } %>
->>>>>>> 5edc672aa783091d8e1ead0d6b001e4ffd6bdfe2
                         </div>
                         <div class='save'>
                             <label for="save" class='save'>
