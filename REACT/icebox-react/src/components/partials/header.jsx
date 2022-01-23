@@ -15,6 +15,9 @@ function Footer() {
                     <Link title='home' to="/index"><img src='../../../public/images/Logo2.svg' className='logo' alt='home'></Link>
                 </nav>
                 <nav className='right-nav-bar'>
+
+                {local.isLogged?jsx:jsx}
+    
                     <% if (locals.isLogged){ %>
                         <img src="../../../public/images/profileImages/<%= locals.userLogged.avatar %>" width="40"
                             style='border-radius: 100%;'>

@@ -12,4 +12,17 @@ Las etiquetas <link> (de head.jsx) las cuales no tienen cierre se agregó un cie
 Seguimos por entender cómo vamos a solucionar los errores que pertenecen a porciones de codigo js insertado con sintaxis de html, como ser ejemplos de : <%= locals.userLogged.name %>  ó    <% if (locals.isLogged){ %>
 
 ===============================================================================================================================================================================
+23-01-2022
+
+Buscamos pensar la estructura de directorios y archivos con un diseño orgánico y funcional a la medida de nuestro proyecto, queriendo hacer simple la lógica de rutas y coherente al contexto de las ubicaciones de cada directorio y archivo.
+
+El diseño es el clásico modelo en ramas.
+
+Utilizando directorios referenciales en ramas principales con nombre de:
+    ▀  "callbacks"      >>>> Contendrá los archivos de funciones a los endpoints y demás callbacks como ser APIs
+    ▀  "css"            >>>> Hojas de estilo segmentada para la rama que integra
+    ▀  "js_backend.jsx" >>>> Archivos que conecten o hagan solicitudes al backend
+    ▀  "mocks"          >>>> Directorio para contener archivos para las pruebas con base de datos local
+
+    De este modo podemos agregar otros directorios coherentes al contexto orgánico y fucional del proyecto.
 
