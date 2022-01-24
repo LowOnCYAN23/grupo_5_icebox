@@ -2,9 +2,9 @@ import { Link,Routes,Route } from 'react-router-dom';
 import React, { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
-import Footer from './components/partials/footer';
-import Head from './components/partials/Head';
-import Header from './components/partials/Header';
+import Footer from '../partials/footer';
+import Head from '../partials/Head';
+import Header from '../partials/Header';
 
 function App() {
  <React.Fragment>

@@ -3,7 +3,7 @@ import {Link,Route,Routes} from "react-router-dom";
 
 
 function Index() {
-    <React.Fragment>
+    <>
 
         <!DOCTYPE html>
         <html lang="en">
@@ -57,8 +57,8 @@ function Index() {
         </body>
 
         </html>
-   </React.Fragment>
+   </>
 
 };
 
-export default Index;
+export default Home;

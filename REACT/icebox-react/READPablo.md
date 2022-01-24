@@ -26,3 +26,13 @@ Utilizando directorios referenciales en ramas principales con nombre de:
 
     De este modo podemos agregar otros directorios coherentes al contexto orgánico y fucional del proyecto.
 
+En el terrono de las hojas de estilo la aproximación a la vieja usanza consiste en dejar algunos ids y classes por ahí, configurar reglas en el CSS, y esperar lo mejor. En CSS todo tiene, por defecto, ámbito global. Las definiciones anidadas (por ejemplo, .main .sidebar .button) crean una lógica implícita en los estilos. Ambas características incrementan la complejidad a medida que el proyecto va creciendo. Esta aproximación puede ser aceptable al comenzar, pero a medida que vayas desarrollando, irás queriendo migrar a otra solución.
+Las alternativas a esto son en base a:
+    METODOLOGIAS CSS
+    PROCESADORES CSS (SASS)
+    ESTILOS EN LÍNEA
+    BIBLIOTECAS
+    MODULOS CSS
+Todavía no existen buenas prácticas, y todavía estamos tratando de encontrar la mejor manera de aplicar estilos con React.
+
+Por lo pronto utilizaremos CSS plano a la vieja usanza por cuestión de tiempo, segmentando algunas hojas de estilo tal vez.
