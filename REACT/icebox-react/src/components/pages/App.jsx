@@ -1,29 +1,15 @@
-import { Link,Routes,Route } from 'react-router-dom';
-import React, { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
-import Footer from '../partials/footer';
-import Head from '../partials/Head';
-import Header from '../partials/Header';
+import React, { useState } from 'react';
+import Home from '../pages/Home';
+import "./css/home.css";   {/*¿que criterio aplicar con los estilos en determinados componentes?*/}
+import "./css/main.css";
+import "./css/styles.css";
 
 function App() {
- <React.Fragment>
-   <Footer/>
-   
-
-
-
- </React.Fragment>
-
-
-
+   <Home/>
 }
+export default App;
 
-export default App
-
-
-
-/*
+{/*
 const [count, setCount] = useState(0)
 
 return (
@@ -61,4 +47,4 @@ return (
     </header>
   </div>
 )
-*/
+*/}
