@@ -5,7 +5,10 @@ import "./css/main.css";
 import "./css/styles.css";
 
 function App() {
-   <Home/>
+
+  return (
+    <Home/>
+  )
 }
 export default App;
 

@@ -2,7 +2,8 @@ import React from "react";
 import {Link,Route,Routes} from "react-router-dom";
 
 function Footer() {
-    <>
+    return(
+       
         <footer className='main-footer'>
             <div className='main-footer-top'>
                 <div className="footer-top">
@@ -27,6 +28,7 @@ function Footer() {
                 <p className='copyright'> ICEBOX 2021</p>
             </div>
         </footer>
-    </>
+    )
+    
 }
 export default Footer;

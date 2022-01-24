@@ -5,6 +5,8 @@ import Header from "../partials/Header";
 import Footer from "../partials/Footer";
 
 function Home() {
+    
+    return(
     <>
         <head>
           <Head/>
@@ -49,7 +51,8 @@ function Home() {
                 </main>
                 <Footer/>
         </body>
-   </>
+    </>
+    )
 };
 
 export default Home;
