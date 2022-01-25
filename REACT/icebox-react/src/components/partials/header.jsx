@@ -1,6 +1,6 @@
 import React from "react";
 import {Link,Route,Routes} from "react-router-dom"
-import LoggedBackend from "./jsx_backend/LoggedBackend"
+import LoggedBackend from "./jsx_backend/LoggedBackend.jsx"
 
 function Footer() {
     return(
