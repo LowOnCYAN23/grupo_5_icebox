@@ -1,0 +1,161 @@
+section img {
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+
+section.products-container {
+  position: relative;
+  text-align: center;
+}
+
+section div.arrow_left {
+  position: absolute;
+  font-size: 5rem;
+  top: 20%;
+  left: -45%;
+  transform: translate(-50%, -50%);
+}
+
+section div.arrow_right {
+  position: absolute;
+  font-size: 5rem;
+  top: 20%;
+  right: -45%;
+  transform: translate(-50%, -50%);
+}
+
+section div.arrow_left:hover,
+section div.arrow_right:hover {
+  color: #fbff00;
+  font-size: 5rem;
+  cursor: pointer;
+}
+
+section div.product-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  height: 50%;
+  text-align: center;
+}
+
+section div h1.products-title {
+  font-size: 10rem;
+  margin: 3rem;
+}
+section div h2.products-description {
+  font-size: 3rem;
+  font-weight: lighter;
+  margin: 3rem;
+  padding: 0 5%;
+}
+
+section div h2.products-price {
+  font-size: 6rem;
+}
+
+section div h2.products-notes {
+  font-size: 4rem;
+  margin: 3rem;
+  background-color: #30fde8;
+  color: #000;
+  width: 50%;
+  margin: 3% auto;
+  padding: 2rem;
+  border-radius: 3rem;
+}
+
+section div h2 a {
+  color: #000;
+}
+
+section div h2.products-notes:hover {
+  color: #000;
+  background-color: #fbff00;
+  cursor: pointer;
+}
+
+@media (max-width: 1279px) {
+  section div.product-text {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    height: 60%;
+    text-align: center;
+  }
+
+  section div h1.products-title {
+    font-size: 8rem;
+    margin: 2rem;
+  }
+  section div h2.products-description {
+    font-size: 3rem;
+    font-weight: lighter;
+    margin: 2rem;
+    padding: 0 3%;
+  }
+  section div h2.products-price {
+    font-size: 5rem;
+  }
+
+  section div h2.products-notes {
+    font-size: 3rem;
+    margin: 3rem;
+    background-color: #30fde8;
+    color: #000;
+    width: 30%;
+    margin: 3% auto;
+    padding: 1rem;
+    border-radius: 3rem;
+  }
+}
+
+@media (min-width: 851px) {
+  section div.product-text {
+    position: absolute;
+    top: 58%;
+  }
+
+  section div h1.products-title {
+    font-size: 7rem;
+  }
+  section div h2.products-description {
+    font-size: 2.8rem;
+  }
+  section div h2.products-price {
+    font-size: 4rem;
+  }
+
+  section div h2.products-notes {
+    font-size: 2.5rem;
+    width: 25%;
+  }
+}
+
+@media (max-width: 850px) {
+  section div.product-text {
+    top: 55%;
+    height: 40%;
+  }
+
+  section div h1.products-title {
+    font-size: 6rem;
+    margin: 2rem;
+  }
+  section div h2.products-description {
+    font-size: 2.2rem;
+  }
+  section div h2.products-price {
+    font-size: 3.5rem;
+  }
+
+  section div h2.products-notes {
+    font-size: 3rem;
+    width: 25%;
+  }
+}

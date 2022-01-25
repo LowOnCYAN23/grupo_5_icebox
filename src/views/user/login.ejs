@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ICEBOX | Iniciar sesión </title>
+    <%-include ('../partials/src') %>
+</head>
+
+<body>
+    <%-include ('../partials/navBar') %>
+
+        <form action="/login" method="POST" class='user-form'>
+            <div class='form-container'>
+                <div class='form-title'> Bienvenido </div>
+
+                <label for="email"><i class="fas fa-envelope"></i> Email </label>
+                <input type="text" name='email' placeholder="micorreo@direccion.com">
+                <% if (locals.errors && errors.email){ %>
+                    <div class='text-danger'>
+                        <%= errors.email.msg %>
+                    </div>
+                    <% } %>
+
+                        <label for="password"><i class="fas fa-key"></i> Contraseña </label>
+                        <input type="password" name='password' placeholder="Escribe tu contraseña">
+                        <% if (locals.errors && errors.password){ %>
+                            <div class='text-danger'>
+                                <%= errors.password.msg %>
+                            </div>
+                            <% } %>
+
+                                <div class='buttons'>
+                                    <button type="submit" class='register-btn'> Iniciar sesión </button>
+                                    <button type="reset" class=reset-btn> Borrar todo </button>
+                                </div>
+            </div>
+        </form>
+
+
+        <%-include ('../partials/footer') %>
+            <script src="/JS/script.js">
+            </script>
+
+</html>

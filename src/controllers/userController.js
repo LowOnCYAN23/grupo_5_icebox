@@ -1,18 +1,22 @@
-const path = require('path');
 const db = require('../database/models');
 
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
+const path = require('path');
 
 module.exports = {
   list: (req, res) => {
     db.Users.findAll().then((list) => {
-      res.render('../views/products/products', { list: list });
+      res.render('./user/usersInDB', { list: list });
     });
   },
 
+  register: (req, res) => {
+    res.render('./user/register');
+  },
+
   login: (req, res) => {
-    return res.render(path.resolve(__dirname, '../views/users/login'));
+    res.render('./user/login');
   },
 
   loginProcess: (req, res) => {
@@ -22,10 +26,10 @@ module.exports = {
       },
     }).then((response) => {
       if (response) {
-        return res.send(response);
+        res.send(response);
       }
 
-      return res.render(path.resolve(__dirname, '../views/users/login'), {
+      res.render(path.resolve(__dirname, '../views/user/login'), {
         errors: {
           email: {
             msg: 'Este correo electrónico no esta registrado',
@@ -35,15 +39,11 @@ module.exports = {
     });
   },
 
-  register: (req, res) => {
-    return res.render(path.resolve(__dirname, '../views/users/register'));
-  },
-
   create: (req, res) => {
     const resultValidation = validationResult(req);
     // console.log(resultValidation.mapped())--> Para ver los errores en los campos del formulario
     if (resultValidation.errors.length > 0) {
-      return res.render(path.resolve(__dirname, '../views/users/register'), {
+      res.render(path.resolve(__dirname, '../views/user/register'), {
         // Convierte el array de errores (Que estan en el middleware de validateRegisterMiddleware) en objeto literal
         errors: resultValidation.mapped(),
         // Objeto literal donde van a estar todo lo que vino en el formulario
@@ -57,7 +57,7 @@ module.exports = {
       },
     }).then((response) => {
       if (response) {
-        res.render(path.resolve(__dirname, '../views/users/register'), {
+        res.render(path.resolve(__dirname, '../views/user/register'), {
           errors: {
             email: {
               msg: 'Este correo electrónico ya esta registrado',
@@ -74,28 +74,44 @@ module.exports = {
           image: req.file.filename,
         })
           .then(() => {
-            return res.redirect('/login');
+            res.redirect('/login');
           })
           .catch((error) => res.send(error));
       }
     });
   },
+  edit: (req, res) => {
+    db.Users.findByPk(req.params.id).then((user) => {
+      res.render(path.resolve(__dirname, '../views/user/edit'), {
+        user: user,
+      });
+    });
+  },
 
   update: (req, res) => {
+    const resultValidation = validationResult(req);
+    if (resultValidation.errors.length > 0) {
+      res.render(path.resolve(__dirname, '../views/user/register'), {
+        // Convierte el array de errores (Que estan en el middleware de validateRegisterMiddleware) en objeto literal
+        errors: resultValidation.mapped(),
+        // Objeto literal donde van a estar todo lo que vino en el formulario
+        oldData: req.body,
+      });
+    }
     db.Users.update(
       {
         name: req.body.name,
         email: req.body.email,
-        password: req.body.password,
-        image: req.body.image,
+        password: bcryptjs.hashSync(req.body.password, 10),
+        image: req.file.filename,
       },
       {
         where: {
-          id: req.params.id,
+          id_users: req.params.id,
         },
       }
     );
-    return res.render(path.resolve(__dirname, '../views/users/profile'));
+    res.redirect('/usersInDB');
   },
 
   delete: (req, res) => {
@@ -104,15 +120,15 @@ module.exports = {
         id: req.params.id,
       },
     });
-    res.redirect('/products');
+    res.redirect('/usersInDB');
   },
 
   logout: (req, res) => {
-    res.render(path.resolve(__dirname, '../views/users/register'));
+    res.render(path.resolve(__dirname, '../views/user/register'));
   },
   userProfile: (req, res) => {
     console.log(req.cookies.userEmail);
-    return res.render(path.resolve(__dirname, '../views/users/profile'), {
+    res.render(path.resolve(__dirname, '../views/user/profile'), {
       user: req.session.userLogged,
     });
   },

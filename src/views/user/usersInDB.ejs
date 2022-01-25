@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ICEBOX | Lista de usuarios </title>
+    <%-include ('../partials/src') %>
+</head>
+
+<body>
+    <%-include ('../partials/navBar') %>
+        <section class='list-users-container'>
+            <div class='grid-list-users'>
+                <div class='list-users-information'>
+                    <div class='list-users-title'> Usuarios registrados: <%= list.length%>
+                    </div>
+
+                    <div class='list-users'>
+                        <% for (let i=0 ; i<list.length;i++){ %>
+                            <li>
+                                <a href="/edit/<%= list[i].id_users%>">
+                                    <img src="/Images/profileImages/<%= list[i].image%>" alt=""
+                                        class='profile-user-list'>
+                                    <%= list[i].name%>
+                                        <div class='email-user-information'>
+                                            <%= list[i].email%>
+                                        </div>
+                                </a>
+                            </li>
+                            <% }%>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            </div>
+
+        </section>
+
+        <%-include ('../partials/footer') %>
+
+</body>
+<script src="/JS/script.js">
+</script>
+
+</html>

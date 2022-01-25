@@ -1,0 +1,277 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  border: 0px;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  font-family: 'Roboto';
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 35%;
+}
+
+body {
+  background: url(/images/background.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+header.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: 4rem 4%;
+  display: flex;
+  flex-direction: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+}
+
+header nav.navbar {
+  display: none;
+}
+
+header nav.shopping-navbar {
+  width: 35%;
+  height: 100vh;
+  padding: 0 2rem;
+  display: flex;
+  z-index: 2;
+  flex-direction: column;
+  background-color: #30fde8;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+header nav.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+header nav div.cancel {
+  position: absolute;
+  display: block;
+  top: 2.5%;
+  left: 95%;
+  font-size: 3rem;
+  color: #ca175c;
+}
+
+header nav div.cancel:hover {
+  color: #30fde8;
+  cursor: pointer;
+}
+
+header nav img {
+  width: 25%;
+  padding: 1rem 3%;
+}
+
+header nav div.shopping-resume {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  margin: 3% 1rem;
+  background-color: #fff;
+  border-radius: 3rem;
+  position: relative;
+}
+
+header nav div.product-shopping-description {
+  width: 60%;
+  text-align: justify;
+  margin: 1rem;
+}
+
+header nav div.shopping-resume:hover {
+  background-color: #fbff00;
+}
+
+header nav div.product-title {
+  font-size: 3.2rem;
+  color: #000;
+  font-weight: bolder;
+}
+
+header nav div.product-shopping-description {
+  font-size: 2rem;
+}
+
+header nav div.price-shopping {
+  font-size: 3rem;
+  font-weight: bolder;
+  padding: 0.5rem 0;
+}
+
+header nav div button {
+  padding: 2rem;
+  background-color: #000;
+  color: #fff;
+  border-radius: 2rem;
+  margin: 3% 0;
+}
+
+header button.buy-shopping:hover {
+  background-color: #30fde8;
+  color: #000;
+  cursor: pointer;
+}
+
+header button.erase-shopping:hover {
+  background-color: #ca175c;
+  cursor: pointer;
+}
+
+.fa-times {
+  transform: rotate(90deg);
+}
+
+header div.navbar-btns {
+  display: flex;
+}
+
+header div a.icons {
+  font-size: 3rem;
+  margin: 0 2rem;
+  color: #30fde8;
+  cursor: pointer;
+  padding: 2rem;
+}
+
+header div a div.icons:hover {
+  color: #fbff00;
+}
+
+header img.logo {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-60%);
+  width: 90px;
+  padding: -1rem;
+  height: auto;
+}
+
+@media (min-width: 1280px) {
+  header nav.navbar {
+    display: flex;
+  }
+
+  header nav.shopping-navbar {
+    display: flex;
+  }
+
+  header a {
+    font-size: 3rem;
+    color: #30fde8;
+    cursor: pointer;
+    padding: 2rem;
+    margin: 0 1%;
+  }
+  header a:hover {
+    color: #fbff00;
+  }
+  header div#menu-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 1279px) {
+  header.header {
+    height: 90px;
+  }
+
+  header img.logo {
+    transform: translateX(0);
+    left: 6rem;
+  }
+
+  header nav div.cancel {
+    top: 2.5%;
+    left: 93%;
+  }
+  header nav.shopping-navbar {
+    width: 50%;
+  }
+
+  header nav.navbar {
+    display: none;
+    z-index: 2;
+    width: 100%;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #30fde8;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  header nav.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  header div a {
+    display: block;
+    margin: 3rem;
+    font-size: 3rem;
+    color: #30fde8;
+    cursor: pointer;
+    padding: 3.5rem;
+    margin: 0 1%;
+    text-align: center;
+  }
+
+  header nav.navbar a {
+    display: block;
+    margin: 3rem;
+    font-size: 3rem;
+    color: #000;
+    cursor: pointer;
+    padding: 2rem;
+    margin: 0 1%;
+  }
+
+  header nav.navbar a:hover {
+    color: #fbff00;
+  }
+}
+@media (max-width: 850px) {
+  header.header {
+    height: 120px;
+  }
+
+  header nav div.cancel {
+    top: 2%;
+    left: 95%;
+  }
+  header nav.shopping-navbar {
+    width: 80%;
+  }
+
+  header img.logo {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-38%);
+    width: 90px;
+    padding: -1rem;
+    height: auto;
+    margin: auto;
+  }
+  header div.navbar-btns {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: auto;
+    margin-top: 8rem;
+  }
+}

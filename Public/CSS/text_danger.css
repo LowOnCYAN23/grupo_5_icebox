@@ -1,0 +1,15 @@
+form div.text-danger {
+  color: #30fde8;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  margin: 0 auto;
+  text-align: center;
+  width: 70%;
+  font-weight: lighter;
+  background-color: unset;
+}
+
+form div.text-danger:hover {
+  color: #fbff00;
+  cursor: pointer;
+}

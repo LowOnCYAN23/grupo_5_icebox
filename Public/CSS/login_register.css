@@ -1,0 +1,126 @@
+form div.form-container {
+  background-color: #000;
+  text-align: center;
+  width: 30%;
+  height: auto;
+  margin: auto;
+  padding: 1rem;
+  border-radius: 5rem;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 5px 5px 17px 17px rgba(0, 0, 0, 0.74);
+}
+
+form div.register-form-container {
+  background-color: #000;
+  text-align: center;
+  width: 30%;
+  height: auto;
+  margin: auto;
+  padding: 1rem;
+  border-radius: 5rem;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 5px 5px 17px 17px rgba(0, 0, 0, 0.74);
+}
+
+form div {
+  font-size: 4rem;
+  font-weight: bolder;
+  margin: 5%;
+  color: #000;
+  padding: 1rem;
+  background-color: #30fde8;
+  border-radius: 3rem;
+}
+
+form div input.image-text {
+  color: #fff;
+}
+
+form div label {
+  font-size: 2.5rem;
+  font-weight: lighter;
+  margin: 2%;
+  color: #30fde8;
+  font-family: 'Roboto';
+}
+
+form input {
+  border-radius: 4rem;
+  width: 70%;
+  height: 5rem;
+  margin: auto;
+  color: #000;
+  text-align: center;
+}
+
+form div.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+form button {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3rem;
+  width: 35%;
+  height: 6rem;
+  padding: 1rem;
+  margin: 3% 2rem;
+  font-size: 2.5rem;
+  background-color: #000;
+  color: #30fde8;
+}
+
+form button:hover {
+  background-color: #fbff00;
+  color: #000;
+}
+
+form button.reset-btn:hover {
+  background-color: #ca175c;
+  color: #fff;
+}
+
+@media (max-width: 1279px) {
+  form div.form-container {
+    width: 40%;
+  }
+  form div.register-form-container {
+    width: 35%;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 850px) {
+  form div.form-container {
+    width: 40%;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  form div.register-form-container {
+    width: 45%;
+    top: 23%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  form button {
+    padding: 4rem;
+    width: 40%;
+  }
+}

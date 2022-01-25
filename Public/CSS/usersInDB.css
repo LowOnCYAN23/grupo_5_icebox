@@ -1,0 +1,82 @@
+section div.grid-list-users {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  height: 60%;
+  text-align: center;
+  margin: auto;
+  text-decoration: none;
+}
+
+section div.list-users-information {
+  background-color: #000;
+  text-align: left;
+  padding: 5rem;
+  width: 50%;
+  border-radius: 3rem;
+  margin: auto;
+}
+
+section div.list-users-title {
+  font-size: 5rem;
+  color: #fff;
+  margin-bottom: 4rem;
+  font-weight: bolder;
+  text-align: center;
+}
+
+div.list-users {
+  text-align: justify;
+  padding: 1rem;
+  height: 70%;
+  column-count: 2;
+  column-gap: 10rem;
+}
+
+li {
+  list-style: none;
+}
+
+section div.email-user-information {
+  font-size: 2rem;
+  color: #30fde8;
+}
+
+section div img.profile-user-list {
+  display: inline-block;
+  width: 10%;
+  border-radius: 100%;
+}
+
+section div.list-users li a {
+  font-size: 2rem;
+  color: #fff;
+}
+
+section div.list-users li a:hover {
+  color: #fbff00;
+  cursor: pointer;
+}
+
+section div.list-users-title-02 {
+  font-size: 5rem;
+  font-weight: bolder;
+  text-align: center;
+}
+
+section div.total-list-users {
+  font-size: 6rem;
+  text-align: center;
+  font-weight: bolder;
+}
+
+@media (max-width: 1279px) {
+  section div.list-users-information {
+    width: 90%;
+  }
+  section div.grid-list-users {
+    top: 55%;
+  }
+}

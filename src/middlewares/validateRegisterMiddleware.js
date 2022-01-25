@@ -1,6 +1,5 @@
 const path = require('path');
 const { body } = require('express-validator');
-const db = require('../database/models');
 
 const registerValidations = [
   body('name').notEmpty().withMessage('Tiene que escribir un nombre completo'),
@@ -11,7 +10,12 @@ const registerValidations = [
     .isEmail()
     .withMessage('Debes escribir un correo electrónico válido'),
 
-  body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
+  body('password')
+    .notEmpty()
+    .withMessage('Tienes que escribir una contraseña')
+    .bail()
+    .isLength({ min: 8 })
+    .withMessage('La contraseña debe ser minimo de 8 caracteres'),
 
   body('image').custom((value, { req }) => {
     let file = req.file;
