@@ -40,4 +40,13 @@ Por lo pronto utilizaremos CSS plano a la vieja usanza por cuestión de tiempo, 
 25-01-2022
 
 Estamos trabados con como crear los endpoints como APIs REST para vincular el backend con el frontend de REACT.
+================================================================================================================================================
+26-01-282370262
 
+Nos decidimos a generar un proyecto REACT básico para crear una estructura que funciones con pruebas sencillas y escalables, ya que el anterior muy completo en absoluto pudo funcionar sin errores.
+
+Ahora armamos una estructura de varios componentes centralizados en el componente App.jsx implementando etiquetas Link y Routes.
+
+Las pruebas de renderizado con textos e imagen funcionan sin fallas, continuamos con lograr los endpoints del tipo API para lograr las consignas, basicamente vamos a usar los mismos endpoints del proyecto principal con express y base de datos sql si faltaran endpoints estudiar como crearlos.
+
+================================================================================================================================================
