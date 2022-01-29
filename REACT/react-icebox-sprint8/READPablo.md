@@ -50,3 +50,8 @@ Ahora armamos una estructura de varios componentes centralizados en el component
 Las pruebas de renderizado con textos e imagen funcionan sin fallas, continuamos con lograr los endpoints del tipo API para lograr las consignas, basicamente vamos a usar los mismos endpoints del proyecto principal con express y base de datos sql si faltaran endpoints estudiar como crearlos.
 
 ================================================================================================================================================
+28-01-2022
+
+Probamos armar un dashboard con la base de un proyecto armado en ejercicion pero no fue posible encontrar la forma de pasar los datos provenientes de los endpoints de la base de datos a un objeto que integraba las props de un componente padre, con este escenario nos dedicamos a estructurar paso a paso probando uno por uno los endpoints, en principio usamos un endpoint para todos los componentes que sabíamos que funcionaba bien, y así escalamos a casi el total de los endpoints.
+
+Falta mucho por recorrer con REACT para definir las rutas parametrizadas, el listado de total de usuarios y productos como de categorías, las relaciones, etc.

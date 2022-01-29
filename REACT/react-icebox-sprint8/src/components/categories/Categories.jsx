@@ -1,15 +1,13 @@
 import axios from 'axios';
 import React, {useEffect,useState} from 'react';
 
-import ApiUsers from '../users/ApiUsers';
-
-export default function Dashboard() {
-  const [users, setUsers] = useState([])
+export default function ApiCategories() {
+  const [categories, setCategories] = useState([])
       useEffect(()=>{
-          axios.get('http://localhost:5000/api/users')
+          axios.get('http://localhost:5000/api/categories')
           .then(({data}) => { 
               console.log(data);
-              setUsers(JSON.stringify(data));
+              setCategories(JSON.stringify(data));
               
               //console.log('users', users);
             })
@@ -17,10 +15,8 @@ export default function Dashboard() {
       },[])
   return (
       <div>
-        <h1>Prueba de DASHBORAD.jsx</h1>
-        <p>{users}</p>
-
-        <ApiUsers />
+        <h1>Prueba  6   de ApiCATEGORIES.jsx</h1>
+        <p>{categories}</p>
       </div>
     //console.log('ApiProductsId')
   )
