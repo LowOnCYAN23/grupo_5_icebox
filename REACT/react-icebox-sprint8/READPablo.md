@@ -54,4 +54,23 @@ Las pruebas de renderizado con textos e imagen funcionan sin fallas, continuamos
 
 Probamos armar un dashboard con la base de un proyecto armado en ejercicion pero no fue posible encontrar la forma de pasar los datos provenientes de los endpoints de la base de datos a un objeto que integraba las props de un componente padre, con este escenario nos dedicamos a estructurar paso a paso probando uno por uno los endpoints, en principio usamos un endpoint para todos los componentes que sabíamos que funcionaba bien, y así escalamos a casi el total de los endpoints.
 
+En forma paralela se realizaron ajustes en el proyecto con express y base de datos creando nuevos controladores y rutas, se agregó las rutas en app.js, y algunas modificaciones en las tablas de los modelos por falta de coicidencia de los nombres en las columnas
+
 Falta mucho por recorrer con REACT para definir las rutas parametrizadas, el listado de total de usuarios y productos como de categorías, las relaciones, etc.
+
+30-01-2022
+
+Logramos armar una SPA con REACT muy básica pero funcional con la entrega en un dashboard con info de:
+TOTAL DE PRODUCTOS
+TOTAL DE USUARIOS
+TOTAL DE CATEGORIAS
+ULTIMO PRODUCTO CREADO
+ULTIMO USUARIO CREADO
+LISTA DE CATEGORIAS
+LISTADO DE PRODUCTOS
+PAGINA ERROR 404
+
+Los listados de cada endpoint se visualizan en formato array porque nos falta convertirlos en formato de objeto literal segmentado.
+
+Nos falta las relaciones y entregar por rutas dinámicas la info de usuarios y productos.
+

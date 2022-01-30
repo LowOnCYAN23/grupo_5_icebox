@@ -1,23 +1,22 @@
 import axios from 'axios';
 import React, {useEffect,useState} from 'react';
 
-export default function ApiProductsId() {
-  const [users, setUsers] = useState([])
+export default function ProductId() {
+  const [ProductId, setProductsId] = useState([])
       useEffect(()=>{
           axios.get('http://localhost:5000/api/products/:id')
           .then(({data}) => { 
               console.log(data);
-              setUsers(JSON.stringify(data));
-              
-              //console.log('users', users);
+              setProductsId(JSON.stringify(data));
+              //console.log('ProductId', ProductId);
             })
           .catch(e=>console.log(e))
       },[])
   return (
       <div>
-        <h1>Prueba de ApiProductsId.jsx</h1>
-        <p>{users}</p>
+        <h1>DETALLE DE PRODUCTO</h1>
+        <p>{ProductId}</p>
       </div>
-    //console.log('ApiProductsId')
+    //console.log('ProductId')
   )
 };
