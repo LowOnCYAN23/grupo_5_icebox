@@ -58,6 +58,7 @@ En forma paralela se realizaron ajustes en el proyecto con express y base de dat
 
 Falta mucho por recorrer con REACT para definir las rutas parametrizadas, el listado de total de usuarios y productos como de categorías, las relaciones, etc.
 
+================================================================================================================================================
 30-01-2022
 
 Logramos armar una SPA con REACT muy básica pero funcional con la entrega en un dashboard con info de:

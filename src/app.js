@@ -26,16 +26,14 @@ app.use(
 app.use('/', indexRoute);
 app.use(user);
 app.use(product);
-
-//RUTAS DE API-REACT
+//RUTAS DE API-REACT=============================================
 const apiUsers = require('./routes/api/apiUsersRoute');
 app.use(apiUsers);
 const apiProducts = require('./routes/api/apiProductsRoute');
 app.use(apiProducts);
 const apiCategories = require('./routes/api/apiCategoriesRoute');
 app.use(apiCategories);
-
-
+//===============================================================
 app.listen(process.env.PORT || 5000, () => {
   console.log('Servidor 5000 ACTIVADO');
 });

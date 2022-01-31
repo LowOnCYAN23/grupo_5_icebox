@@ -9,5 +9,13 @@ module.exports = {
     })
     .catch(e=>console.log(e));
   },
+  id: (req, res) => {
+    let idProduct = req.params.id;
+    db.Products.findByPk(idProduct)
+    .then((product) => {
+      res.send(product);
+    })
+    .catch(e=>console.log(e));
+  }
 
 };
