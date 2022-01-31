@@ -63,7 +63,7 @@ CREATE TABLE `categories` (
   PRIMARY KEY (`id_category`),
   UNIQUE KEY `id_UNIQUE` (`id_category`),
   UNIQUE KEY `name_UNIQUE` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -72,7 +72,7 @@ CREATE TABLE `categories` (
 
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` VALUES (1,'Accesorios para consolas'),(10,'Accesorios para PC Gaming'),(2,'Componentes de PC'),(9,'Consolas'),(8,'Máquinas de juegos'),(4,'Otros'),(7,'Repuestos de Consolas'),(6,'Repuestos de PC Gaming'),(3,'Tablets y accesorios'),(5,'Videojuegos');
+INSERT INTO `categories` VALUES (1,'Accesorios para consolas'),(10,'Accesorios para PC Gaming'),(2,'Componentes de PC'),(9,'Consolas'),(12,'Libros académicos '),(11,'Libros fantásticos'),(8,'Máquinas de juegos'),(4,'Otros'),(7,'Repuestos de Consolas'),(6,'Repuestos de PC Gaming'),(3,'Tablets y accesorios'),(5,'Videojuegos'),(14,'Videos blue ray Marvel'),(13,'Videos clásicos'),(15,'Videos documentales');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -139,7 +139,7 @@ CREATE TABLE `products` (
   `id_product` int NOT NULL AUTO_INCREMENT,
   `name_product` varchar(45) NOT NULL,
   `description_product` text NOT NULL,
-  `product_image` varchar(25) NOT NULL,
+  `product_image` varchar(100) NOT NULL,
   `price` decimal(10,2) NOT NULL,
   `fk_color` int DEFAULT NULL,
   `fk_category` int DEFAULT NULL,
@@ -155,7 +155,7 @@ CREATE TABLE `products` (
   CONSTRAINT `fk_color` FOREIGN KEY (`fk_color`) REFERENCES `colors` (`id_color`),
   CONSTRAINT `fk_genre` FOREIGN KEY (`fk_genre`) REFERENCES `genres` (`id_genre`),
   CONSTRAINT `fk_trademark` FOREIGN KEY (`fk_trademark`) REFERENCES `trademarks` (`id_trademark`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -164,7 +164,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'Xbox 360','Consola de Videojuegos','Default01.jpg',1100.00,1,10,10,11),(2,'Nintendo DS Lite','Consola de Videojuegos','Default02.jpg',4000.00,9,10,10,11),(3,'The Last of Us','Videojuegos','Default03.jpg',2200.00,9,5,6,11),(4,'Halo Infinite','Videojuegos','Default04.jpg',2600.00,2,5,5,11),(5,'Monitor LG OLG 250','Monitor para PC Gaming','Default05.jpg',5000.00,1,4,11,12),(6,'Nintendo Switch Lite','Consola de Videojuegos','Default06.jpg',1100.00,9,9,10,11),(7,'Nintendo 3DS XL','Consola de Videojuegos','Default07.jpg',2000.00,5,9,10,11),(8,'Playstation 3','Consola de Videojuegos','Default08.jpg',1000.00,6,9,12,11),(9,'PC Gaming RTX 3060','Consola PC Gaming ','Default09.jpg',3000.00,9,2,1,11),(10,'Playstation 4','Consola de Videojuegos','Default010.jpg',1500.00,8,9,12,11);
+INSERT INTO `products` VALUES (1,'Xbox 360','Consola de Videojuegos','https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Xbox-360-Consoles-Infobox.png/1200px-Xbox-',1100.00,1,10,10,11),(2,'Nintendo DS Lite','Consola de Videojuegos','https://static.turbosquid.com/Preview/000302/584/MH/nintendo-ds-lite-3d-model_D.jpg',4000.00,9,10,10,11),(3,'The Last of Us','Videojuegos','https://m.media-amazon.com/images/I/51CCabyGiQL._SX342_.jpg',2200.00,9,5,6,11),(4,'Halo Infinite','Videojuegos','https://www.lg.com/ar/images/MN/features/29UM58-P-sRGB_31012018_M.jpg',2600.00,2,5,5,11),(5,'Monitor LG OLG 250','Monitor para PC Gaming','https://cdn.cloudflare.steamstatic.com/steam/apps/1708091/capsule_616x353.jpg?t=1637004586',5000.00,1,4,11,12),(6,'Nintendo Switch Lite','Consola de Videojuegos','https://m.media-amazon.com/images/I/51CCabyGiQL._SX342_.jpg',1100.00,9,9,10,11),(7,'Nintendo 3DS XL','Consola de Videojuegos','https://cdn.cloudflare.steamstatic.com/steam/apps/1708091/capsule_616x353.jpg?t=1637004586',2000.00,5,9,10,11),(8,'Playstation 3','Consola de Videojuegos','https://static.wikia.nocookie.net/thelastofus/images/f/fe/Portada_Parte_I_limpia.jpeg/revision/lates',1000.00,6,9,12,11),(9,'PC Gaming RTX 3060','Consola PC Gaming ','https://upload.wikimedia.org/wikipedia/commons/d/d6/Nintendo_DS_Lite_side.jpg',3000.00,9,2,1,11),(10,'Playstation 4','Consola de Videojuegos','https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Xbox-360-Consoles-Infobox.png/1200px-Xbox-',1500.00,8,9,12,11),(11,'Harry Potter Saga Completa','7 Libros en box pack de la mejor zaga','https://http2.mlstatic.com/D_NQ_NP_706138-MLA44164216624_112020-O.jpg',16998.00,9,11,13,1),(12,'La torre oscura Stphen King','Ronald Deschain es el último de una larga saga de pistoleros. Recorre un planeta desolado en busca de la Torre Oscura,','https://media.revistagq.com/photos/5ca5e821501e5414227c426d/master/w_1600%2Cc_limit/los_25_best_sell',4000.00,9,11,13,1),(13,'Paystation 4 PRO','Consola de Videojuegos','https://www.cetrogar.com.ar/media/catalog/product/E/L/EL2231.jpg?width=500&height=500&canvas=500:500',30000.00,8,9,12,11);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -210,7 +210,7 @@ CREATE TABLE `trademarks` (
   PRIMARY KEY (`id_trademark`),
   UNIQUE KEY `id_UNIQUE` (`id_trademark`),
   UNIQUE KEY `name_UNIQUE` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -219,7 +219,7 @@ CREATE TABLE `trademarks` (
 
 LOCK TABLES `trademarks` WRITE;
 /*!40000 ALTER TABLE `trademarks` DISABLE KEYS */;
-INSERT INTO `trademarks` VALUES (1,'Activision'),(2,'Atari'),(3,'Bandai'),(4,'Blizzard'),(6,'Capcom'),(7,'Epic Games'),(8,'Konami'),(11,'LG'),(9,'Microsoft'),(10,'Nintendo'),(12,'PlayStation'),(5,'Riot Games');
+INSERT INTO `trademarks` VALUES (1,'Activision'),(2,'Atari'),(3,'Bandai'),(4,'Blizzard'),(6,'Capcom'),(7,'Epic Games'),(8,'Konami'),(11,'LG'),(9,'Microsoft'),(10,'Nintendo'),(13,'Planeta'),(12,'PlayStation'),(5,'Riot Games');
 /*!40000 ALTER TABLE `trademarks` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -261,4 +261,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-30 23:31:32
+-- Dump completed on 2022-01-31 18:07:35

@@ -11,7 +11,7 @@ function Listados(){
     //ENDPOINT CANTIDAD TOTAL USUARIOS
     const [usersList, setUsersList] = useState([])
       useEffect(()=>{
-          axios.get('http://localhost:5000/api/users/')
+          axios.get('http://localhost:5000/api/users/list')
           .then(({data}) => { 
               console.log(data);
               setUsersList(JSON.stringify(data));
@@ -22,7 +22,7 @@ function Listados(){
     //ENDPOINT CANTIDAD TOTAL PRODUCTOS
     const [products, setProducts] = useState([])
       useEffect(()=>{
-          axios.get('http://localhost:5000/api/products')
+          axios.get('http://localhost:5000/api/products/list')
           .then(({data}) => { 
               console.log(data);
               setProducts(JSON.stringify(data));
