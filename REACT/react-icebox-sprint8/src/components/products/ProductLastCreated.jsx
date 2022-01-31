@@ -5,7 +5,7 @@ export default function ProductsLastCreated() {
 
     const [productLast, setProductsLast] = useState([])
         useEffect(()=>{
-            axios.get('http://localhost:5000/api/products/')
+            axios.get('http://localhost:5000/api/products/list')
             .then(({data}) => { 
                 console.log(data);
                 let i=(data.length)-1;

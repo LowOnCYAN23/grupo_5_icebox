@@ -4,7 +4,7 @@ import React, {useEffect,useState} from 'react';
 export default function ApiUsersList() {
   const [usersList, setUsersList] = useState([])
       useEffect(()=>{
-          axios.get('http://localhost:5000/api/users/')
+          axios.get('http://localhost:5000/api/users/list')
           .then(({data}) => { 
               console.log(data);
               setUsersList(JSON.stringify(data));

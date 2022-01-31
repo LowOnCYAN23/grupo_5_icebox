@@ -13,6 +13,7 @@ import UserId from '../users/UserId.jsx';
 import CategoriesTotal from '../categories/CategoriesTotal.jsx';
 import CategoriesList from '../categories/CategoriesList.jsx';
 import Error404 from '../error/Error404.jsx';
+import Footer from '../partials/Footer.jsx';
 //STYLE SHEET
 import '../pages/css/app.css';
 
@@ -53,6 +54,7 @@ export default function Dashboard() {
           </Routes>
         </ul>
       </div>
+      <Footer />
     </>
   )
 };
