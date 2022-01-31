@@ -75,3 +75,11 @@ Los listados de cada endpoint se visualizan en formato array porque nos falta co
 
 Nos falta las relaciones y entregar por rutas dinámicas la info de usuarios y productos.
 
+================================================================================================================================================
+31-01-2022
+Finalizamos con ordenar la identación de todos los códigos en lo posible y generamos una vista con un proyecto paralelo refactorizado para una mejor presentación con una base de un último ejercicio de REACT.
+Se entregan los datos requeridos por endpoints y por dashboard sin la entrega de resultados por relaciones ya que revisamos la documentación pertinente en REACT y no encontramos como obtener los datos relacionados con foreign key para mostrarlos en pantalla sin hacer pasos complejos, solo solicitar en una o dos query los datos de las relaciones (color, categoría, género, etc).
+
+Contento de haber participado en este proyecto por lo que requirió lo máximo adquirido en toda la cursada y de al menos lograr algunas funcionalidades básicas y haber participado con un grupo de gente, sin duda capacitandome permanentemente en este apasionante mundo de la programación.
+
+

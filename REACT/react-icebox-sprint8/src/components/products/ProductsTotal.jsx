@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, {useEffect,useState} from 'react';
-
+//TOTAL DE PRODUCTOS
 export default function ProductsTotal() {
   const [products, setProducts] = useState([])
       useEffect(()=>{
@@ -10,7 +10,7 @@ export default function ProductsTotal() {
               setProducts(data.length);
             })
           .catch(e=>console.log(e))
-      },[])
+      },[]);
   return (
     <div>
         <h1>TOTAL DE PRODUCTOS</h1>

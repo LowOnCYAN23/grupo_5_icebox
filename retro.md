@@ -68,3 +68,20 @@ RETROSPECTIVA  Sprint 7 :
 3)Reorganizarnos para suplir las tareas que no se cumplan por razones personales de otros integrantes, mantener la comunicación en forma activa con los compañeros para emparentar los trabajos. .
 4)Enfocarse en intentos ciegos de muchos días y horas (base de datos, validaciones, etc) como problemasy recurrir a ayuda externa si existe la posibilidad.
 5)Esperar respuestas del equipo docente y buscar info en la web y conocidos del ambiente.
+
+RETROSPECTIVA SPRINT 8
+1. Comenzar a hacer.
+2. Hacer más.
+3. Continuar haciendo.
+4. Hacer menos.
+5. Dejar de hacer.
+
+1) Ajustes finales tanto en REACT como en el Backend para que brindemos funcionalidad a nuestro proyecto.
+Definir detalles en el Frontend con validaciones y ajustes en la funcionalidad Responsive.
+2) Conocer mas alternativas a las soluciones planteadas para que nuestro código sea de fácil manteniento capacitandonos continuamente en documentación y práctica en soluciones.
+3) Continuar asignando responsabilidades concretas y seguir ayundándonos en cuanto surja una traba a cualquier integrante.
+4) quedarnos a querer solucionar las incidencias sólos siempre pidiendo ayuda o recomendaciones en forma externa para completar el objetivo en lo posible.
+5) Postergar las tareas urgentes para lo último o estar con desorden sin tener en claro cuales son los objetivos logrado, por lograr, en curso, con una enumeración de los mismos.
+
+
+Estamos contentos de haber participado de un equipo y un proyecto que ante las adversidades logramos cumplir ciertas tareas y continuar capacitandonos en lo que nos apasiona.

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, {useEffect,useState} from 'react';
-
+//ULTIMO USUARIO REGISTRADO DESDE ENDPOINT
 export default function UsersTotal() {
     const [usersLast, setUsersLast] = useState([]);
         useEffect(()=>{
@@ -12,8 +12,8 @@ export default function UsersTotal() {
                 setUsersLast(JSON.stringify(ultimoUsuario));
                 //setUsersLast(data.length);
                 //setUsersLast(JSON.stringify(data));
-                //setUsersLast((JSON.stringify(data).forEach()));//NO HAY FORMA QUE EL ARRAY 
-                //console.log('usersLast', usersLast);  SE DESCOMPONGA EN OBJETOS INDIVIDUALES
+                //setUsersLast((JSON.stringify(data).forEach()));
+                //console.log('usersLast', usersLast);
             })
             .catch(e=>console.log(e))
         },[])

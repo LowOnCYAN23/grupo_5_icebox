@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, {useEffect,useState} from 'react';
-
+//ULTIMO PRODUCTO INGRESADO
 export default function ProductsLastCreated() {
 
     const [productLast, setProductsLast] = useState([])
@@ -14,7 +14,7 @@ export default function ProductsLastCreated() {
                 //console.log('productLast', productLast);
             })
             .catch(e=>console.log(e))
-        },[])
+        },[]);
     return (
         <div>
             <h1>ULTIMO PRODUCTO CREADO</h1>

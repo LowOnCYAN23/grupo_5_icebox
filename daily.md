@@ -11,3 +11,8 @@ Tarea asignada no completada por razones particulares del integrante de grupo 5.
 weeckly sprint 7
 
 Hubo falta de acuerdo en estas reunines, por lo que el proyecto sigue su curso con muchos faltantes y tareas rasignadas a pocos integrantes del grupo, en varias oportunidades pedimos asistencia docente pero no fue lo suficiente para nuestro equipo. Tratamos de avanzar lo mejor posible, tuvimos trabas con las validaciones al dia de la fecha, del lado del frontend como del backend, de modo persistente fueron los errores y fallas, estamos abierto a próximas reuniones exitosas. 
+
+Weeckly SPRINT 8
+
+Nuevamente hubo dificultades a la hora de combinar horarios que al menos en contacto con mensajes y pocas reunines logramos de armar el proyecto con funcionalidades básicas y para seguir mejorandolas.
+Logramos superar las incidencias con las conexiones del backend con el frontend.
