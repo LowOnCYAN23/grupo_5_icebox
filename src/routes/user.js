@@ -22,13 +22,22 @@ router.post('/login', loginValidations, userController.loginProcess);
 //Lista de usuarios
 router.get('/usersInDB', userController.list);
 
+//Detalle de usuarios
+router.get('/userDetails/:id', userController.userDetails);
+
+//Perfil de usuario
+router.get('/profile', userController.profile);
+
 //Editar usuario
 router.get('/edit/:id', userController.edit);
 router.post(
   '/edit/:id',
-  uploadFile.single('image'),
   registerValidations,
+  uploadFile.single('image'),
   userController.update
 );
+
+//Eliminar usuario
+router.post('/delete/:id', userController.delete);
 
 module.exports = router;

@@ -1,8 +1,8 @@
 module.exports = {
   development: {
     username: 'root',
-    password: 'Bl@nco',
-    database: 'icebox-db',
+    password: 'sashasan23',
+    database: 'icebox_prueba',
     host: '127.0.0.1',
     dialect: 'mysql',
   },

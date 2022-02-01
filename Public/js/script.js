@@ -18,6 +18,13 @@ shoppingBtn.onclick = () => {
   menuBtn.classList.remove('fa-times');
 };
 
+let usersInDB = document.querySelector('header #usersInDB');
+usersInDB.onclick = () => {
+  alert(
+    'En esta sección podrás ver los usuarios registrados, editar los usuarios así como eliminarlos '
+  );
+};
+
 window.onscroll = () => {
   shoppingBtn.classList.remove('fa-times');
   shoppingNavbar.classList.remove('active');

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ICEBOX | Detalles de usuario <%= user.name %>
+    </title>
+    <%-include ('../partials/src') %>
+</head>
+
+<body>
+    <%-include ('../partials/navBar') %>
+        <section class='list-users-container'>
+            <div class='list-users-information'>
+                <img src="/Images/profileImages/<%= user.image %>" alt="" class='userLogged-image'>
+                <div class='list-users-title'> Bienvenido, <%= user.name %>
+                </div>
+                <div class='userLogged-email'>
+                    <%= user.email %>
+                </div>
+
+                <div class='userLogged-buttons-containers'>
+                    <div class='userLogged-email'> <a href="/edit/<%=user.id_users%>" class='userLogged-edit'> Editar
+                            usuario</a>
+
+                    </div>
+
+                    <form action="/delete/<%= user.id_users %>" method="post" class='userLogged-email'>
+                        <button type="submit" class='userLogged-delete'> Eliminar usuario</button>
+                    </form>
+
+                </div>
+
+
+
+
+
+        </section>
+
+        <%-include ('../partials/footer') %>
+
+</body>
+<script src="/JS/script.js">
+</script>
+
+</html>

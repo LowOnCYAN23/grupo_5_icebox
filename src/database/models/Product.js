@@ -19,19 +19,19 @@ module.exports = (sequelize, DataTypes) => {
       price: {
         type: DataTypes.DECIMAL,
       },
-      fk_color: {
+      fk_id_color: {
         foreignKey: true,
         type: DataTypes.INTEGER,
       },
-      fk_category: {
+      fk_id_category: {
         foreignKey: true,
         type: DataTypes.INTEGER,
       },
-      fk_trademark: {
+      fk_id_trademark: {
         foreignKey: true,
         type: DataTypes.INTEGER,
       },
-      fk_genre: {
+      fk_id_genre: {
         foreignKey: true,
         type: DataTypes.INTEGER,
       },

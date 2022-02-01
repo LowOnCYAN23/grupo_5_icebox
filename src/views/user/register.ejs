@@ -11,7 +11,7 @@
 
 <body>
     <%-include ('../partials/navBar') %>
-        <form action="/register" method="POST" enctype="multipart/form-data" class='user-form'>
+        <form action="/register" method="POST" enctype="multipart/form-data" class='user-form' id='register'>
             <div class='register-form-container'>
                 <div class='form-title'> Nuevo usuario </div>
 
@@ -31,7 +31,7 @@
 
                         <label for="email"><i class="fas fa-envelope"></i> Email </label>
                         <input type="email" name='email' value="<%= locals.oldData ? oldData.email : null %>"
-                            placeholder="Escribe tu correo electrónico">
+                            placeholder="Escribe tu correo electrónico" id='email'>
                         <% if (locals.errors && errors.email){ %>
                             <div class='text-danger'>
                                 <!--De errors que es la variable que llega, yo quiero la propiedad de name el mensaje-->

@@ -1,53 +1,130 @@
-section div.grid-list-users {
+section.list-users-container {
   position: absolute;
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-  height: 60%;
+  width: 70%;
   text-align: center;
   margin: auto;
   text-decoration: none;
 }
 
+section div.sad-face {
+  color: #30fde8;
+  font-size: 50rem;
+}
+
+section div.lengthUserList {
+  display: inline-block;
+}
+
+section div.lengthUserList:hover {
+  color: #30fde8;
+  cursor: pointer;
+}
+
 section div.list-users-information {
   background-color: #000;
-  text-align: left;
-  padding: 5rem;
-  width: 50%;
+  padding: 3rem;
+  text-align: center;
+  width: 45%;
   border-radius: 3rem;
   margin: auto;
+  box-shadow: 5px 5px 17px 17px rgba(0, 0, 0, 0.5);
 }
 
 section div.list-users-title {
   font-size: 5rem;
   color: #fff;
-  margin-bottom: 4rem;
   font-weight: bolder;
   text-align: center;
+  padding: 1rem;
+  border-top: 0.3rem solid #30fde8;
+  border-bottom: 0.3rem solid #30fde8;
+  margin-bottom: 1rem;
 }
 
 div.list-users {
-  text-align: justify;
   padding: 1rem;
-  height: 70%;
-  column-count: 2;
-  column-gap: 10rem;
+  column-count: 1;
+  margin: auto;
 }
 
 li {
   list-style: none;
 }
 
+section div.userLogged-email {
+  color: #30fde8;
+  font-size: 3rem;
+  padding: 1rem;
+}
+
+section div.userLogged-email:hover {
+  color: #fbff00;
+  cursor: pointer;
+}
+
+section img.userLogged-image {
+  border-radius: 100%;
+  width: 80%;
+  padding: 3rem;
+  cursor: pointer;
+}
+
+section div.userLogged-buttons-containers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: auto 15%;
+  padding: 2.5rem;
+}
+
+section div a.userLogged-edit,
+section div button.userLogged-delete {
+  background-color: #30fde8;
+  padding: 1.5rem;
+  border-radius: 3rem;
+  color: #000;
+  font-size: 2.5rem;
+  width: auto;
+  margin: auto;
+}
+
+section div button.userLogged-delete {
+  padding: 2rem;
+}
+
+section div a.userLogged-edit:hover {
+  background-color: #fbff00;
+  color: #000;
+  cursor: pointer;
+}
+
+section div button.userLogged-delete:hover {
+  background-color: #ca175c;
+  color: #fff;
+  cursor: pointer;
+}
+
+div img.userLoggedEdit-image {
+  border-radius: 100%;
+  width: 10%;
+  margin-top: 1%;
+}
+
 section div.email-user-information {
   font-size: 2rem;
   color: #30fde8;
+  margin-bottom: 1rem;
 }
 
 section div img.profile-user-list {
-  display: inline-block;
-  width: 10%;
+  width: 5%;
   border-radius: 100%;
+  margin: auto;
 }
 
 section div.list-users li a {
@@ -60,23 +137,8 @@ section div.list-users li a:hover {
   cursor: pointer;
 }
 
-section div.list-users-title-02 {
-  font-size: 5rem;
-  font-weight: bolder;
-  text-align: center;
-}
-
-section div.total-list-users {
-  font-size: 6rem;
-  text-align: center;
-  font-weight: bolder;
-}
-
 @media (max-width: 1279px) {
   section div.list-users-information {
-    width: 90%;
-  }
-  section div.grid-list-users {
-    top: 55%;
+    width: 60%;
   }
 }

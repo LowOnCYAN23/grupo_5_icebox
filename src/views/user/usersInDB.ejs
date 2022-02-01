@@ -12,32 +12,37 @@
 <body>
     <%-include ('../partials/navBar') %>
         <section class='list-users-container'>
-            <div class='grid-list-users'>
-                <div class='list-users-information'>
-                    <div class='list-users-title'> Usuarios registrados: <%= list.length%>
+            <div class='list-users-information'>
+                <div class='list-users-title'> Usuarios registrados: <div class='lengthUserList'>
+                        <%= list.length%>
                     </div>
 
-                    <div class='list-users'>
-                        <% for (let i=0 ; i<list.length;i++){ %>
-                            <li>
-                                <a href="/edit/<%= list[i].id_users%>">
-                                    <img src="/Images/profileImages/<%= list[i].image%>" alt=""
-                                        class='profile-user-list'>
-                                    <%= list[i].name%>
-                                        <div class='email-user-information'>
-                                            <%= list[i].email%>
-                                        </div>
-                                </a>
-                            </li>
-                            <% }%>
-
-                    </div>
                 </div>
 
+                <div class='list-users'>
+                    <% for (let i=0 ; i<list.length;i++){ %>
+                        <li>
+                            <a href="/userDetails/<%= list[i].id_users%>">
+                                <img src="/Images/profileImages/<%= list[i].image%>" alt="" class='profile-user-list'>
+                                <div class='email-user-information'>
+
+                                </div>
+
+                                <%= list[i].name%>
+                                    <div class='email-user-information'>
+                                        <%= list[i].email%>
+                                    </div>
+                            </a>
+                        </li>
+                        <% }%>
+
+                </div>
+            </div>
+
 
             </div>
 
-            </div>
+
 
         </section>
 

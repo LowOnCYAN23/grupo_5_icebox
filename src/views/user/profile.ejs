@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ICEBOX | Perfil de usuario </title>
+    <%-include ('../partials/src') %>
+</head>
+
+<body>
+    <%-include ('../partials/navBar') %>
+        <section class='list-users-container'>
+            <div class='list-users-information'>
+                <img src="/Images/profileImages/<%=userLogged.image %>" alt="" class='userLogged-image'>
+                <div class='list-users-title'> Bienvenido, <%=userLogged.name %>
+                </div>
+                <div class='userLogged-email'>
+                    <%= userLogged.email %>
+                </div>
+        </section>
+
+        <%-include ('../partials/footer') %>
+
+</body>
+<script src="/JS/script.js">
+</script>
+
+</html>

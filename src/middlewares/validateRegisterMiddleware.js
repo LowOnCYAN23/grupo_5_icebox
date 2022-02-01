@@ -2,7 +2,7 @@ const path = require('path');
 const { body } = require('express-validator');
 
 const registerValidations = [
-  body('name').notEmpty().withMessage('Tiene que escribir un nombre completo'),
+  body('name').notEmpty().withMessage('Tienes que escribir un nombre completo'),
   body('email')
     .notEmpty()
     .withMessage('Tienes que escribir un correo electrónico')
@@ -22,7 +22,7 @@ const registerValidations = [
     let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
 
     if (!file) {
-      throw new Error('Tienes que subir una imagen');
+      throw new Error('Tienes que subir una imagen de perfil');
     } else {
       let fileExtension = path.extname(file.originalname);
       if (!acceptedExtensions.includes(fileExtension)) {
